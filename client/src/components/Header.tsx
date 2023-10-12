@@ -23,7 +23,6 @@ const Header: React.FC = () => {
     },
     h1: {
       fontSize: '64px',
-      fontWeigh: 'bold',
       margin: '1rem',
     },
     p: {
