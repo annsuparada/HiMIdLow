@@ -13,7 +13,7 @@ export const white = '#ffffff'
 
 export const mobileView = '600px'
 export const tabletView = '850px'
-export const desktopView = '1280px'
+export const desktopView = '1440px'
 
 export const theme = createTheme({
   palette: {
