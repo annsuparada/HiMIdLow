@@ -1,13 +1,14 @@
 import { createTheme } from '@mui/material/styles'
 
 export const primary = '#0034F0'
-export const secondary = '#1A126F'
+export const secondary = '#21232a'
 export const error = '#cc0000' // need to update
 export const warning = '#f39c12' // need to update
 export const success = '#007f4f' // need to update
 export const background = '#efefef'
 export const darkBackground = '#e3e4eb'
 export const darkFont = '#21232a'
+export const darkBotton = '#261aab'
 
 export const white = '#ffffff'
 
