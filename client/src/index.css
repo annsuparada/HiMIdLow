@@ -1,7 +1,10 @@
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', sans-serif; /* Use 'Inter' font for h1 and h2 */
+  font-family: 'Inter', sans-serif; 
+  color: #21232a;
+  font-weight: 600;
 }
 
 p, a, label  {
-  font-family: 'Plus Jakarta Sans', sans-serif; /* Use 'Plus Jakarta Sans' font for p */
+  font-family: 'Plus Jakarta Sans', sans-serif; 
+  color: #21232a;
 }

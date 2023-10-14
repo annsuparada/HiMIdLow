@@ -49,7 +49,9 @@ const NavBar: React.FC = () => {
   return (
     <MainWrapper backgroundColor={background}>
       <div style={styles.navContainer}>
-        <img src={logo} alt="Low Mid Hight Logo" style={styles.logo} />
+        <Link to="/">
+          <img src={logo} alt="Low Mid Hight Logo" style={styles.logo} />
+        </Link>
         <div></div>
         <Tabs
           value={value}

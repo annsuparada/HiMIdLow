@@ -12,7 +12,7 @@ const PageContainer: React.FC<PageContainerProps> = ({
   const styles = {
     container: {
       backgroundColor: backgroundColor,
-      height: '100vh',
+      height: '100%',
       width: '100%',
       margin: 0,
       padding: 0,
