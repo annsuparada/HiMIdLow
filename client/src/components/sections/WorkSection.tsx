@@ -1,9 +1,9 @@
 import React from 'react'
-import great from '../img/great.jpg'
-import modok from '../img/modok.jpg'
-import woke from '../img/Woke.jpg'
-import dopesick from '../img/dopesick.jpg'
-import VideoModal from './VideoModal'
+import great from '../../img/great.jpg'
+import modok from '../../img/modok.jpg'
+import woke from '../../img/Woke.jpg'
+import dopesick from '../../img/dopesick.jpg'
+import VideoModal from '../VideoModal'
 
 const WorkSection: React.FC = () => {
   const styles = {
@@ -20,6 +20,7 @@ const WorkSection: React.FC = () => {
       display: 'grid',
       gridTemplateColumns: 'repeat(4, 1fr)',
       gap: '10px',
+      justifyContent: 'spaceBetween',
     },
     img: {
       width: '100%',

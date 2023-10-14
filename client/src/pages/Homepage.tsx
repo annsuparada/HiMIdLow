@@ -1,7 +1,8 @@
 import React from 'react'
-import Header from '../components/Header'
+import BrandingSection from '../components/sections/BrandingSection'
+import Header from '../components/sections/Header'
 import MainWrapper from '../components/MainWrapper'
-import WorkSection from '../components/WorkSection'
+import WorkSection from '../components/sections/WorkSection'
 import { background } from '../theme'
 
 const Homepage: React.FC = () => {
@@ -9,6 +10,7 @@ const Homepage: React.FC = () => {
     <MainWrapper backgroundColor={background}>
       <Header />
       <WorkSection />
+      <BrandingSection />
     </MainWrapper>
   )
 }
