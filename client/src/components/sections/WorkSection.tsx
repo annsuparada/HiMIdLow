@@ -20,7 +20,6 @@ const WorkSection: React.FC = () => {
       display: 'grid',
       gridTemplateColumns: 'repeat(4, 1fr)',
       gap: '10px',
-      justifyContent: 'spaceBetween',
     },
     img: {
       width: '100%',

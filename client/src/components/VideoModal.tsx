@@ -62,7 +62,7 @@ const VideoModal: React.FC<VideoModelProps> = ({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <Card sx={{ maxWidth: 345 }} onClick={handleOpen}>
+        <Card sx={{ width: '100%' }} onClick={handleOpen}>
           <CardActionArea>
             <CardMedia
               component="img"
