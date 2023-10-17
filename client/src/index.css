@@ -8,3 +8,7 @@ p, a, label  {
   font-family: 'Plus Jakarta Sans', sans-serif; 
   color: #21232a;
 }
+
+p {
+  font-size: 24px;
+}

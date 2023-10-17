@@ -4,6 +4,7 @@ import Header from '../components/sections/Header'
 import MainWrapper from '../components/MainWrapper'
 import WorkSection from '../components/sections/WorkSection'
 import { background } from '../theme'
+import DetailSection from '../components/sections/DetailSection'
 
 const Homepage: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const Homepage: React.FC = () => {
       <Header />
       <WorkSection />
       <BrandingSection />
+      <DetailSection />
     </MainWrapper>
   )
 }

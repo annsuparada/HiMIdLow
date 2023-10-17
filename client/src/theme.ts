@@ -9,8 +9,11 @@ export const background = '#efefef'
 export const darkBackground = '#e3e4eb'
 export const darkFont = '#21232a'
 export const darkBotton = '#261aab'
-
+export const lightPurple = '#F0E5F6'
+export const darkPurple = '#1A126F26'
 export const white = '#ffffff'
+export const logoColor = '#21232A'
+export const pink = '#FEE1FF'
 
 export const mobileView = '600px'
 export const tabletView = '850px'
