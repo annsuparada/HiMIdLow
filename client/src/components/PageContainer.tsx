@@ -15,7 +15,6 @@ const PageContainer: React.FC<PageContainerProps> = ({
     container: {
       backgroundColor: backgroundColor,
       height: '100%',
-      width: '100%',
       margin: 0,
       padding: padding ? padding : 0,
     },
