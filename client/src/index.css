@@ -4,11 +4,16 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
-p, a, label  {
+p, a, label {
   font-family: 'Plus Jakarta Sans', sans-serif; 
   color: #21232a;
 }
 
+li {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #21232a;
+  font-size: 18px;
+}
 p {
   font-size: 24px;
 }

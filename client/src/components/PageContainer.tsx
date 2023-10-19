@@ -3,11 +3,13 @@ import React, { ReactNode } from 'react'
 interface PageContainerProps {
   backgroundColor: string
   children: ReactNode
+  padding?: string
 }
 
 const PageContainer: React.FC<PageContainerProps> = ({
   children,
   backgroundColor,
+  padding,
 }) => {
   const styles = {
     container: {
@@ -15,7 +17,7 @@ const PageContainer: React.FC<PageContainerProps> = ({
       height: '100%',
       width: '100%',
       margin: 0,
-      padding: 0,
+      padding: padding ? padding : 0,
     },
   }
   return <div style={styles.container}>{children}</div>
