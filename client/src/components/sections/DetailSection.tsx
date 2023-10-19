@@ -1,19 +1,61 @@
-import { Card } from '@mui/material'
+import { Button, Card } from '@mui/material'
 import React from 'react'
-import { lightPurple } from '../../theme'
+import { darkBackground, lightPurple } from '../../theme'
 import arrowIcon from '../../logo/arrows-repeat-solid.svg'
 import pointerIcon from '../../logo/bullseye-pointer.svg'
 import volumeUpIcon from '../../logo/volume-up.svg'
 import quote from '../../logo/Quote.svg'
+import MainWrapper from '../MainWrapper'
 
+const membershipPerks = [
+  {
+    title: 'Sound Board',
+    description: 'Add as many unique projects to your board as you want.',
+  },
+  {
+    title: 'Fast and Easy',
+    description:
+      'You’ll get your mixes back in 1 to 3 days.  It sure makes scheduling easy!',
+  },
+  {
+    title: 'Fix Flat Fee',
+    description:
+      'All the mixes you need at a consistent flat price.  No more negotiating!',
+  },
+  {
+    title: 'World Class Sound',
+    description:
+      'We’ve got over 20 years experience editing, designing and mixing sound for major Hollywood studios.',
+  },
+  {
+    title: 'Scaling for any need',
+    description:
+      'As your needs grow, so can your plan. Change plans at any time for any reason.',
+  },
+  {
+    title: 'Cancel anytime',
+    description:
+      'All good relationships need to take a breather every now and again. That’s why you can cancel or pause your subscription at any time.',
+  },
+  {
+    title: '',
+    description: '',
+  },
+  {
+    title: 'You’re one of a small cohort',
+    description:
+      'We only take on 6 active clients, no more! Building powerful relationships with our clients is point number one.',
+  },
+]
 const DetailSection: React.FC = () => {
   const styles = {
     container: {
       paddingTop: '4rem',
       paddingBottom: '7rem',
     },
+    h1: { textAlign: 'center' as 'center', fontSize: '44px' },
     cardContainer: {
-      maxWidth: '1200px',
+      maxWidth: '1300px',
       margin: '4rem auto 8rem',
       display: 'grid',
       gap: '2.5rem',
@@ -49,13 +91,18 @@ const DetailSection: React.FC = () => {
       borderRadius: '5px',
       overflow: 'hidden',
     },
+    darkBackgroundContainer: {
+      backgroundColor: darkBackground,
+      width: '100%',
+      marginTop: '5rem',
+      paddingTop: '2rem',
+      paddingBottom: '1rem',
+    },
   }
 
   return (
     <div style={styles.container}>
-      <h1 style={{ marginBottom: 0, textAlign: 'center' }}>
-        A new way to do sound.
-      </h1>
+      <h1 style={styles.h1}>A new way to do sound.</h1>
       <p style={{ textAlign: 'center' }}>
         Easier, Faster, and way less of a heache!
       </p>
@@ -93,6 +140,121 @@ const DetailSection: React.FC = () => {
           </p>
           <p style={{ textAlign: 'center' }}>-Lorne Hiltser COO @HKCorp</p>
         </div>
+      </div>
+      <div style={styles.darkBackgroundContainer}>
+        <MainWrapper backgroundColor={darkBackground}>
+          <h1 style={styles.h1}>
+            Sound so good, you'll <br />
+            never go back!
+          </h1>
+          <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+            <p style={{ textAlign: 'center' }}>
+              HiMidLow replaces unreliable freelancers and expensive studios for
+              one flat monthly fee, and delivers mixes so good it’ll blow your
+              mind!
+            </p>
+          </div>
+          <div style={styles.cardContainer}>
+            <div style={{ padding: '10px' }}>
+              <p style={{ fontWeight: 'bold' }}>
+                Short calls or no meetings at all!
+              </p>
+              <p style={{ fontSize: '20px' }}>
+                When you’ve got a mix that needs to get done fast, the last
+                thing you want is to try and schedule a call. If you need it,
+                we’re there for you, but if not, you can leave notes and
+                references in your project folder for us to review.
+              </p>
+            </div>
+
+            <div style={{ padding: '10px' }}>
+              <p style={{ fontWeight: 'bold' }}>
+                Manage your projects with Trello
+              </p>
+              <p style={{ fontSize: '20px' }}>
+                Add as many projects to the backlog as you’d like. When your
+                project is being worked on, we’ll move it to “In progress”, then
+                to “To Review” when it’s ready for you! Keep track of all this
+                real time!
+              </p>
+            </div>
+
+            <div style={{ padding: '10px' }}>
+              <p style={{ fontWeight: 'bold' }}>
+                Keep the entire team involved
+              </p>
+              <p style={{ fontSize: '20px' }}>
+                You can add as many team members to your project as you’d like.
+              </p>
+            </div>
+          </div>
+        </MainWrapper>
+      </div>
+
+      <div style={{ maxWidth: '600px', margin: '6rem auto 6rem' }}>
+        <img src={quote} alt="quote icon" style={styles.quoteImage} />
+        <div style={styles.quoteContainer}>
+          <p style={{ textAlign: 'center' }}>You're Wizard!</p>
+          <p style={{ textAlign: 'center' }}>
+            -Simon English @ Common Table Creative
+          </p>
+        </div>
+      </div>
+
+      <div style={styles.darkBackgroundContainer}>
+        <MainWrapper backgroundColor={darkBackground}>
+          <h1 style={styles.h1}>More than just mixes!</h1>
+          <p style={{ textAlign: 'center' }}>Whatever you need, we got you!</p>
+          <div style={styles.cardContainer}>
+            <div>
+              <p>Mixing</p>
+              <p>Editorial</p>
+              <p>Audio Repair</p>
+              <p>Sound Design</p>
+              <p>Signature Sounds</p>
+            </div>
+            <div>
+              <p>Music mixing</p>
+              <p>Podcast production</p>
+              <p>Audio Consulting</p>
+              <p>Composer referrals</p>
+              <p>Foley</p>
+            </div>
+            <div>
+              <p>ATMOS</p>
+              <p>Binaural audio</p>
+              <p>Game sound design</p>
+              <p>Sonic Identity and Branding</p>
+              <p>Scripted TV and Feature mixes</p>
+            </div>
+          </div>
+        </MainWrapper>
+      </div>
+
+      <div style={{ marginTop: '80px' }}>
+        <h1 style={styles.h1}>Membership perks!</h1>
+        <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+          <p style={{ textAlign: 'center' }}>
+            Working with us is so seamless and easy, you’ll never need to go
+            anywhere else.
+          </p>
+          <Button
+            variant="contained"
+            size="large"
+            sx={{ display: 'block', margin: '45px auto' }}
+          >
+            See our Plans
+          </Button>
+        </div>
+      </div>
+
+      <div style={styles.cardContainer}>
+        {membershipPerks.map((el, index) => (
+          <div style={{ padding: '0 10px' }}>
+            <p style={{ fontWeight: 'bold' }}>{el.title}</p>
+            <p style={{ fontSize: '20px' }}>{el.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   )
