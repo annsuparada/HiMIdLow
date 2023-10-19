@@ -47,6 +47,24 @@ const membershipPerks = [
       'We only take on 6 active clients, no more! Building powerful relationships with our clients is point number one.',
   },
 ]
+
+const details = [
+  {
+    title: 'Short calls or no meetings at all!',
+    description:
+      'When you’ve got a mix that needs to get done fast, the last thing you want is to try and schedule a call. If you need it, we’re there for you, but if not, you can leave notes and references in your project folder for us to review.',
+  },
+  {
+    title: 'Manage your projects with Trello',
+    description:
+      'Add as many projects to the backlog as you’d like. When your project is being worked on, we’ll move it to “In progress”, then to “To Review” when it’s ready for you! Keep track of all this real time!',
+  },
+  {
+    title: 'Keep the entire team involved',
+    description:
+      'You can add as many team members to your project as you’d like.',
+  },
+]
 const DetailSection: React.FC = () => {
   const styles = {
     container: {
@@ -155,38 +173,12 @@ const DetailSection: React.FC = () => {
             </p>
           </div>
           <div style={styles.cardContainer}>
-            <div style={{ padding: '10px' }}>
-              <p style={{ fontWeight: 'bold' }}>
-                Short calls or no meetings at all!
-              </p>
-              <p style={{ fontSize: '20px' }}>
-                When you’ve got a mix that needs to get done fast, the last
-                thing you want is to try and schedule a call. If you need it,
-                we’re there for you, but if not, you can leave notes and
-                references in your project folder for us to review.
-              </p>
-            </div>
-
-            <div style={{ padding: '10px' }}>
-              <p style={{ fontWeight: 'bold' }}>
-                Manage your projects with Trello
-              </p>
-              <p style={{ fontSize: '20px' }}>
-                Add as many projects to the backlog as you’d like. When your
-                project is being worked on, we’ll move it to “In progress”, then
-                to “To Review” when it’s ready for you! Keep track of all this
-                real time!
-              </p>
-            </div>
-
-            <div style={{ padding: '10px' }}>
-              <p style={{ fontWeight: 'bold' }}>
-                Keep the entire team involved
-              </p>
-              <p style={{ fontSize: '20px' }}>
-                You can add as many team members to your project as you’d like.
-              </p>
-            </div>
+            {details.map((el, index) => (
+              <div style={{ padding: '10px' }}>
+                <p style={{ fontWeight: 'bold' }}>{el.title}</p>
+                <p style={{ fontSize: '20px' }}>{el.description}</p>
+              </div>
+            ))}
           </div>
         </MainWrapper>
       </div>
