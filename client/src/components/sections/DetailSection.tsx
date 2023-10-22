@@ -174,7 +174,7 @@ const DetailSection: React.FC = () => {
           </div>
           <div style={styles.cardContainer}>
             {details.map((el, index) => (
-              <div style={{ padding: '10px' }}>
+              <div style={{ padding: '10px' }} key={index}>
                 <p style={{ fontWeight: 'bold' }}>{el.title}</p>
                 <p style={{ fontSize: '20px' }}>{el.description}</p>
               </div>
@@ -242,7 +242,7 @@ const DetailSection: React.FC = () => {
 
       <div style={styles.cardContainer}>
         {membershipPerks.map((el, index) => (
-          <div style={{ padding: '0 10px' }}>
+          <div style={{ padding: '0 10px' }} key={index}>
             <p style={{ fontWeight: 'bold' }}>{el.title}</p>
             <p style={{ fontSize: '20px' }}>{el.description}</p>
           </div>

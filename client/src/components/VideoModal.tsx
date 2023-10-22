@@ -31,10 +31,7 @@ const VideoModal: React.FC<VideoModelProps> = ({
       left: '50%',
       transform: 'translate(-50%, -50%)',
       maxWidth: '800px',
-      bgcolor: 'background.paper',
-      border: '2px solid #000',
-      boxShadow: 24,
-      p: 4,
+      boxShadow: 26,
     },
     icon: {
       fontSize: '5rem',
@@ -86,6 +83,9 @@ const VideoModal: React.FC<VideoModelProps> = ({
             src={videoUrl}
             title="Embedded YouTube Video"
             allowFullScreen
+            width="850"
+            height="485"
+            frameBorder="0"
           ></iframe>
         </Box>
       </Modal>
