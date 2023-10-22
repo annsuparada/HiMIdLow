@@ -28,6 +28,7 @@ const Footer: React.FC = () => {
       marginRight: '25px',
     },
   }
+
   return (
     <PageContainer backgroundColor={darkFont} padding="20px">
       <MainWrapper backgroundColor={darkFont}>

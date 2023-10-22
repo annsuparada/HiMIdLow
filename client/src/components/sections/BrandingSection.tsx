@@ -1,6 +1,7 @@
 import React from 'react'
 import { darkBackground } from '../../theme'
-import warnerBros from '../../branding/Warner_Bros_logo.svg.png'
+import { brandingList, brandingListLastRow } from '../../data'
+
 const BrandingSection: React.FC = () => {
   const styles = {
     container: {
@@ -10,39 +11,24 @@ const BrandingSection: React.FC = () => {
     },
     textContainer: {
       maxWidth: '500px',
-      margin: '0 auto',
+      margin: '0 auto 60px',
     },
     grid: {
       display: 'grid',
       gridTemplateColumns: 'repeat(7, 1fr)',
-      gap: '15px',
+      gap: '20px',
       maxWidth: '1150px',
       margin: '0 auto',
     },
+    gridLastRow: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(6, 1fr)',
+      gap: '20px',
+      maxWidth: '950px',
+      margin: '20px auto',
+    },
   }
 
-  const brandingList = [
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-    { src: warnerBros, alt: 'Warner Bros', width: '60px' },
-  ]
   return (
     <div style={styles.container}>
       <div style={styles.textContainer}>
@@ -50,6 +36,16 @@ const BrandingSection: React.FC = () => {
       </div>
       <div style={styles.grid}>
         {brandingList.map((item, index) => (
+          <img
+            src={item.src}
+            alt={item.alt}
+            key={index}
+            style={{ width: item.width }}
+          />
+        ))}
+      </div>
+      <div style={styles.gridLastRow}>
+        {brandingListLastRow.map((item, index) => (
           <img
             src={item.src}
             alt={item.alt}
