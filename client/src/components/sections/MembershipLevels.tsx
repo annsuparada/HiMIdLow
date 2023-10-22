@@ -54,10 +54,13 @@ const MembershipLevels: React.FC = () => {
       margin: '0px',
     },
   }
+
   return (
     <PageContainer backgroundColor={darkBackground} padding="3rem 0 8rem">
       <MainWrapper backgroundColor={darkBackground}>
-        <h1 style={styles.h1}>Membership Levels</h1>
+        <h1 style={styles.h1} id="membership-levels">
+          Membership Levels
+        </h1>
         <p style={{ textAlign: 'center' }}>Choose your subscription plan!</p>
         <div style={styles.tableGrid}>
           {/* titles */}

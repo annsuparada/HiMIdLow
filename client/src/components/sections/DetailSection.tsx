@@ -65,7 +65,15 @@ const details = [
       'You can add as many team members to your project as you’d like.',
   },
 ]
-const DetailSection: React.FC = () => {
+
+interface DetailSectionProps {
+  scrollToSectionOnClick: (
+    event: React.MouseEvent<HTMLElement, MouseEvent>,
+  ) => void
+}
+const DetailSection: React.FC<DetailSectionProps> = ({
+  scrollToSectionOnClick,
+}) => {
   const styles = {
     container: {
       paddingTop: '4rem',
@@ -231,6 +239,7 @@ const DetailSection: React.FC = () => {
             anywhere else.
           </p>
           <Button
+            onClick={scrollToSectionOnClick}
             variant="contained"
             size="large"
             sx={{ display: 'block', margin: '45px auto' }}

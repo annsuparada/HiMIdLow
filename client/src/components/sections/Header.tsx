@@ -1,7 +1,12 @@
 import { Button } from '@mui/material'
 import React from 'react'
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  scrollToSectionOnClick: (
+    event: React.MouseEvent<HTMLElement, MouseEvent>,
+  ) => void
+}
+const Header: React.FC<HeaderProps> = ({ scrollToSectionOnClick }) => {
   const styles = {
     container: {
       display: 'grid',
@@ -29,6 +34,7 @@ const Header: React.FC = () => {
       fontSize: '24px',
     },
   }
+
   return (
     <div style={styles.container}>
       <div style={styles.bigText}>
@@ -39,7 +45,11 @@ const Header: React.FC = () => {
           Expand your reach with wold class sound for a flat monthly fee.
         </p>
       </div>
-      <Button variant="contained" style={styles.button}>
+      <Button
+        variant="contained"
+        onClick={scrollToSectionOnClick}
+        style={styles.button}
+      >
         See our Plans
       </Button>
       <div style={styles.smallText}>
