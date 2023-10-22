@@ -4,7 +4,10 @@ import { darkBackground } from '../../theme'
 import MainWrapper from '../MainWrapper'
 import PageContainer from '../PageContainer'
 
-const MembershipLevels: React.FC = () => {
+interface MembershipLevelsProps {
+  targetId: string
+}
+const MembershipLevels: React.FC<MembershipLevelsProps> = ({ targetId }) => {
   const styles = {
     h1: {
       fontSize: '44px',
@@ -58,7 +61,7 @@ const MembershipLevels: React.FC = () => {
   return (
     <PageContainer backgroundColor={darkBackground} padding="3rem 0 8rem">
       <MainWrapper backgroundColor={darkBackground}>
-        <h1 style={styles.h1} id="membership-levels">
+        <h1 style={styles.h1} id={targetId}>
           Membership Levels
         </h1>
         <p style={{ textAlign: 'center' }}>Choose your subscription plan!</p>

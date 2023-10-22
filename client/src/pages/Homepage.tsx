@@ -7,8 +7,8 @@ import DetailSection from '../components/sections/DetailSection'
 import MembershipLevels from '../components/sections/MembershipLevels'
 
 const Homepage: React.FC = () => {
-  const targetId = 'membership-levels'
-  const scrollToSectionOnClick = () => {
+  const membershipId = 'membership-levels'
+  const scrollToSectionOnClick = (targetId: string) => {
     const targetSection = document.getElementById(targetId)
     if (targetSection) {
       targetSection.scrollIntoView({ behavior: 'smooth' })
@@ -17,11 +17,15 @@ const Homepage: React.FC = () => {
 
   return (
     <div style={{ backgroundColor: background, width: '100%' }}>
-      <Header scrollToSectionOnClick={scrollToSectionOnClick} />
+      <Header
+        scrollToSectionOnClick={() => scrollToSectionOnClick(membershipId)}
+      />
       <WorkSection />
       <BrandingSection />
-      <DetailSection scrollToSectionOnClick={scrollToSectionOnClick} />
-      <MembershipLevels />
+      <DetailSection
+        scrollToSectionOnClick={() => scrollToSectionOnClick(membershipId)}
+      />
+      <MembershipLevels targetId={membershipId} />
     </div>
   )
 }
