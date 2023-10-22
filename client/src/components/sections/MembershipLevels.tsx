@@ -36,7 +36,7 @@ const MembershipLevels: React.FC = () => {
       margin: '0px',
     },
     priceBox: {
-      marginTop: '100px',
+      marginTop: '60px',
     },
     span: {
       fontSize: '36px',
