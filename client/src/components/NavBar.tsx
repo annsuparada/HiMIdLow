@@ -65,7 +65,8 @@ const NavBar: React.FC = () => {
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue)
   }
-  console.log('is tablet', isTablet)
+
+  // console.log('is tablet', isTablet)
   return (
     <MainWrapper backgroundColor={background}>
       <div style={styles.navContainer}>

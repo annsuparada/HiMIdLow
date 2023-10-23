@@ -6,26 +6,29 @@ import { background } from '../theme'
 import DetailSection from '../components/sections/DetailSection'
 import MembershipLevels from '../components/sections/MembershipLevels'
 
-const Homepage: React.FC = () => {
-  const membershipId = 'membership-levels'
-  const scrollToSectionOnClick = (targetId: string) => {
-    const targetSection = document.getElementById(targetId)
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
+interface HomepageProps {
+  scrollToMembershipOnClick: (
+    event: React.MouseEvent<HTMLElement, MouseEvent>,
+  ) => void
+  whatWeDoId: string
+  membershipId: string
+}
 
+const Homepage: React.FC<HomepageProps> = ({
+  scrollToMembershipOnClick,
+  whatWeDoId,
+  membershipId,
+}) => {
   return (
     <div style={{ backgroundColor: background, width: '100%' }}>
-      <Header
-        scrollToSectionOnClick={() => scrollToSectionOnClick(membershipId)}
-      />
+      <Header scrollToMembershipOnClick={scrollToMembershipOnClick} />
       <WorkSection />
       <BrandingSection />
       <DetailSection
-        scrollToSectionOnClick={() => scrollToSectionOnClick(membershipId)}
+        whatWeDoId={whatWeDoId}
+        scrollToMembershipOnClick={scrollToMembershipOnClick}
       />
-      <MembershipLevels targetId={membershipId} />
+      <MembershipLevels membershipId={membershipId} />
     </div>
   )
 }

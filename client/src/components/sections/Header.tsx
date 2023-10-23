@@ -2,11 +2,11 @@ import { Button } from '@mui/material'
 import React from 'react'
 
 interface HeaderProps {
-  scrollToSectionOnClick: (
+  scrollToMembershipOnClick: (
     event: React.MouseEvent<HTMLElement, MouseEvent>,
   ) => void
 }
-const Header: React.FC<HeaderProps> = ({ scrollToSectionOnClick }) => {
+const Header: React.FC<HeaderProps> = ({ scrollToMembershipOnClick }) => {
   const styles = {
     container: {
       display: 'grid',
@@ -47,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToSectionOnClick }) => {
       </div>
       <Button
         variant="contained"
-        onClick={scrollToSectionOnClick}
+        onClick={scrollToMembershipOnClick}
         style={styles.button}
       >
         See our Plans

@@ -8,13 +8,33 @@ import Homepage from './pages/Homepage'
 import { background, theme } from './theme'
 
 const App: React.FC = () => {
+  const membershipId = 'membership-levels'
+  const whatWeDoId = 'what-we-do'
+
+  const scrollToSectionOnClick = (targetId: string) => {
+    const targetSection = document.getElementById(targetId)
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
   return (
     <ThemeProvider theme={theme}>
       <Router>
         <PageContainer backgroundColor={background}>
           <NavBar />
           <Routes>
-            <Route path="/" element={<Homepage />} />
+            <Route
+              path="/"
+              element={
+                <Homepage
+                  scrollToMembershipOnClick={() =>
+                    scrollToSectionOnClick(membershipId)
+                  }
+                  membershipId={membershipId}
+                  whatWeDoId={whatWeDoId}
+                />
+              }
+            />
           </Routes>
         </PageContainer>
         <Footer />

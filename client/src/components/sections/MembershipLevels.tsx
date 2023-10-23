@@ -5,9 +5,11 @@ import MainWrapper from '../MainWrapper'
 import PageContainer from '../PageContainer'
 
 interface MembershipLevelsProps {
-  targetId: string
+  membershipId: string
 }
-const MembershipLevels: React.FC<MembershipLevelsProps> = ({ targetId }) => {
+const MembershipLevels: React.FC<MembershipLevelsProps> = ({
+  membershipId,
+}) => {
   const styles = {
     h1: {
       fontSize: '44px',
@@ -61,7 +63,7 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({ targetId }) => {
   return (
     <PageContainer backgroundColor={darkBackground} padding="3rem 0 8rem">
       <MainWrapper backgroundColor={darkBackground}>
-        <h1 style={styles.h1} id={targetId}>
+        <h1 style={styles.h1} id={membershipId}>
           Membership Levels
         </h1>
         <p style={{ textAlign: 'center' }}>Choose your subscription plan!</p>
