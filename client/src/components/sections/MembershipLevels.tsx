@@ -54,6 +54,7 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
     button: {
       display: 'block',
       margin: '15px auto',
+      width: '138px',
     },
     noMargin: {
       margin: '0px',
@@ -163,17 +164,32 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
 
             {/* buttons */}
             <div style={styles.gridItem}>
-              <Button variant="contained" sx={styles.button}>
+              <Button
+                variant="contained"
+                sx={styles.button}
+                href="https://calendly.com/himidlow"
+                target="_blank"
+              >
                 Book a call
               </Button>
             </div>
             <div style={styles.gridItem}>
-              <Button variant="contained" sx={styles.button}>
+              <Button
+                variant="contained"
+                sx={styles.button}
+                href="https://calendly.com/himidlow"
+                target="_blank"
+              >
                 Book a call
               </Button>
             </div>
             <div style={styles.gridItem}>
-              <Button variant="outlined" sx={styles.button}>
+              <Button
+                variant="outlined"
+                sx={styles.button}
+                href="https://calendly.com/himidlow"
+                target="_blank"
+              >
                 Book a call
               </Button>
             </div>

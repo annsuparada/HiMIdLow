@@ -117,7 +117,11 @@ const NavBar: React.FC<NavBarProps> = ({
             <Tab
               value="contact"
               label={
-                <Link to="#contact" style={styles.linkBotton}>
+                <Link
+                  to="https://calendly.com/himidlow"
+                  target="_blank"
+                  style={styles.linkBotton}
+                >
                   Let's talk
                 </Link>
               }
