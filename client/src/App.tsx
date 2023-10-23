@@ -10,6 +10,7 @@ import { background, theme } from './theme'
 const App: React.FC = () => {
   const membershipId = 'membership-levels'
   const whatWeDoId = 'what-we-do'
+  const membershipPerksId = 'memershipPerksId'
 
   const scrollToSectionOnClick = (targetId: string) => {
     const targetSection = document.getElementById(targetId)
@@ -23,6 +24,9 @@ const App: React.FC = () => {
         <PageContainer backgroundColor={background}>
           <NavBar
             scrollToWhatWeDoOnClick={() => scrollToSectionOnClick(whatWeDoId)}
+            scrollToMemberShipPerksOnClick={() =>
+              scrollToSectionOnClick(membershipPerksId)
+            }
           />
           <Routes>
             <Route
@@ -34,6 +38,7 @@ const App: React.FC = () => {
                   }
                   membershipId={membershipId}
                   whatWeDoId={whatWeDoId}
+                  membershipPerksId={membershipPerksId}
                 />
               }
             />

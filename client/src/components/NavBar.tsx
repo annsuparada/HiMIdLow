@@ -17,9 +17,15 @@ interface NavBarProps {
   scrollToWhatWeDoOnClick: (
     event: React.MouseEvent<HTMLElement, MouseEvent>,
   ) => void
+  scrollToMemberShipPerksOnClick: (
+    event: React.MouseEvent<HTMLElement, MouseEvent>,
+  ) => void
 }
 
-const NavBar: React.FC<NavBarProps> = ({ scrollToWhatWeDoOnClick }) => {
+const NavBar: React.FC<NavBarProps> = ({
+  scrollToWhatWeDoOnClick,
+  scrollToMemberShipPerksOnClick,
+}) => {
   const [value, setValue] = React.useState('work')
   const isTablet = useMediaQuery(`(max-width:${tabletView})`)
 
@@ -104,12 +110,9 @@ const NavBar: React.FC<NavBarProps> = ({ scrollToWhatWeDoOnClick }) => {
             />
             <Tab
               value="benefits"
-              label={
-                <Link to="#work" style={styles.link}>
-                  Benefits
-                </Link>
-              }
+              label="Benefits"
               sx={styles.tab}
+              onClick={scrollToMemberShipPerksOnClick}
             />
             <Tab
               value="contact"

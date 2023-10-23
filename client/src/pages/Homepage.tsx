@@ -12,12 +12,14 @@ interface HomepageProps {
   ) => void
   whatWeDoId: string
   membershipId: string
+  membershipPerksId: string
 }
 
 const Homepage: React.FC<HomepageProps> = ({
   scrollToMembershipOnClick,
   whatWeDoId,
   membershipId,
+  membershipPerksId,
 }) => {
   return (
     <div style={{ backgroundColor: background, width: '100%' }}>
@@ -26,6 +28,7 @@ const Homepage: React.FC<HomepageProps> = ({
       <BrandingSection />
       <DetailSection
         whatWeDoId={whatWeDoId}
+        membershipPerksId={membershipPerksId}
         scrollToMembershipOnClick={scrollToMembershipOnClick}
       />
       <MembershipLevels membershipId={membershipId} />

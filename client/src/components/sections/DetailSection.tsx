@@ -13,10 +13,12 @@ interface DetailSectionProps {
     event: React.MouseEvent<HTMLElement, MouseEvent>,
   ) => void
   whatWeDoId: string
+  membershipPerksId: string
 }
 const DetailSection: React.FC<DetailSectionProps> = ({
   scrollToMembershipOnClick,
   whatWeDoId,
+  membershipPerksId,
 }) => {
   const styles = {
     container: {
@@ -175,7 +177,7 @@ const DetailSection: React.FC<DetailSectionProps> = ({
         </MainWrapper>
       </div>
 
-      <div style={{ marginTop: '80px' }}>
+      <div style={{ marginTop: '80px' }} id={membershipPerksId}>
         <h1 style={styles.h1}>Membership perks!</h1>
         <div style={{ maxWidth: '600px', margin: '0 auto' }}>
           <p style={{ textAlign: 'center' }}>
