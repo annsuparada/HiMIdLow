@@ -21,7 +21,9 @@ const App: React.FC = () => {
     <ThemeProvider theme={theme}>
       <Router>
         <PageContainer backgroundColor={background}>
-          <NavBar />
+          <NavBar
+            scrollToWhatWeDoOnClick={() => scrollToSectionOnClick(whatWeDoId)}
+          />
           <Routes>
             <Route
               path="/"

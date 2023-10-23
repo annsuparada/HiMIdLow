@@ -13,7 +13,13 @@ import MainWrapper from './MainWrapper'
 import logo from '../logo/LargeLogoBlack.svg'
 import NavBarMobile from './NavBarMobile'
 
-const NavBar: React.FC = () => {
+interface NavBarProps {
+  scrollToWhatWeDoOnClick: (
+    event: React.MouseEvent<HTMLElement, MouseEvent>,
+  ) => void
+}
+
+const NavBar: React.FC<NavBarProps> = ({ scrollToWhatWeDoOnClick }) => {
   const [value, setValue] = React.useState('work')
   const isTablet = useMediaQuery(`(max-width:${tabletView})`)
 
@@ -92,12 +98,9 @@ const NavBar: React.FC = () => {
             />
             <Tab
               value="what-we-do"
-              label={
-                <Link to="#what-we-do" style={styles.link}>
-                  What we do
-                </Link>
-              }
+              label="What we do"
               sx={styles.tab}
+              onClick={scrollToWhatWeDoOnClick}
             />
             <Tab
               value="benefits"

@@ -71,10 +71,8 @@ const DetailSection: React.FC<DetailSectionProps> = ({
   }
 
   return (
-    <div style={styles.container}>
-      <h1 style={styles.h1} id={whatWeDoId}>
-        A new way to do sound.
-      </h1>
+    <div style={styles.container} id={whatWeDoId}>
+      <h1 style={styles.h1}>A new way to do sound.</h1>
       <p style={{ textAlign: 'center' }}>
         Easier, Faster, and way less of a heache!
       </p>
