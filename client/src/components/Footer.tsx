@@ -28,6 +28,7 @@ const Footer: React.FC = () => {
     icon: {
       color: white,
       marginRight: '25px',
+      textDecoration: 'none',
     },
   }
 
@@ -53,8 +54,15 @@ const Footer: React.FC = () => {
           <div style={styles.gridItem}>
             <p style={styles.text}>
               Contact: <br />
-              email: andy@himidlow.com <br />
-              phone: 323.612.8138
+              email:{' '}
+              <Link to="mailto:andy@himidlow.com" style={styles.icon}>
+                andy@himidlow.com
+              </Link>{' '}
+              <br />
+              phone:{' '}
+              <Link to="tel:+13236128138" style={styles.icon}>
+                323.612.8138
+              </Link>
             </p>
             <div>
               <Link
