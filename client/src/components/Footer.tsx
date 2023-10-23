@@ -28,7 +28,6 @@ const Footer: React.FC = () => {
     icon: {
       color: white,
       marginRight: '25px',
-      textDecoration: 'none',
     },
   }
 
@@ -55,14 +54,9 @@ const Footer: React.FC = () => {
             <p style={styles.text}>
               Contact: <br />
               email:{' '}
-              <Link to="mailto:andy@himidlow.com" style={styles.icon}>
-                andy@himidlow.com
-              </Link>{' '}
+              <Link to="mailto:andy@himidlow.com">andy@himidlow.com</Link>{' '}
               <br />
-              phone:{' '}
-              <Link to="tel:+13236128138" style={styles.icon}>
-                323.612.8138
-              </Link>
+              phone: <Link to="tel:+13236128138">323.612.8138</Link>
             </p>
             <div>
               <Link

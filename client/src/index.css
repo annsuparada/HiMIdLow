@@ -13,11 +13,22 @@ p, a, label {
   color: #21232a;
 }
 
+a {
+  font-family: 'Plus Jakarta Sans', sans-serif; 
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 li {
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: #21232a;
   font-size: 18px;
 }
+
 p {
   font-size: 24px;
 }
