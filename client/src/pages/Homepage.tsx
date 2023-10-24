@@ -5,6 +5,7 @@ import WorkSection from '../components/sections/WorkSection'
 import { background } from '../theme'
 import DetailSection from '../components/sections/DetailSection'
 import MembershipLevels from '../components/sections/MembershipLevels'
+import ScrollToTop from '../components/ScrollToTop'
 
 interface HomepageProps {
   scrollToMembershipOnClick: (
@@ -23,6 +24,7 @@ const Homepage: React.FC<HomepageProps> = ({
 }) => {
   return (
     <div style={{ backgroundColor: background, width: '100%' }}>
+      <ScrollToTop />
       <Header scrollToMembershipOnClick={scrollToMembershipOnClick} />
       <WorkSection />
       <BrandingSection />

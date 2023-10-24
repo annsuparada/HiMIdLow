@@ -45,6 +45,9 @@ const Footer: React.FC = () => {
               Cinema Audio Society!
             </p>
             <div>
+              <Link to="/" style={styles.icon}>
+                HOME
+              </Link>
               <Link to="/terms-and-conditions">T.O.S.</Link>
             </div>
           </div>
