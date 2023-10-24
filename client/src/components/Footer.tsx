@@ -13,7 +13,6 @@ const Footer: React.FC = () => {
   const styles = {
     text: {
       color: white,
-      fontSize: '18px',
     },
     grid: {
       display: 'grid',
@@ -45,10 +44,9 @@ const Footer: React.FC = () => {
               Motion Picture Editors guild and the <br />
               Cinema Audio Society!
             </p>
-            <p style={styles.text}>
-              <span style={{ marginRight: '25px' }}>T.O.S.</span>
-              Privacy Policy
-            </p>
+            <div>
+              <Link to="/terms-and-conditions">T.O.S.</Link>
+            </div>
           </div>
           <div style={styles.gridItem}>
             <p style={styles.text}>

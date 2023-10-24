@@ -37,7 +37,6 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
       padding: '15px',
     },
     p: {
-      fontSize: '18px',
       margin: '0px',
     },
     priceBox: {
@@ -48,7 +47,6 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
       fontWeight: 'bold',
     },
     price: {
-      fontSize: '18px',
       textAlign: 'center' as 'center',
     },
     button: {
@@ -196,7 +194,7 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
 
             <div style={styles.lastItem}>
               <h1 style={styles.h1}>Refer a friend!</h1>
-              <p style={{ fontSize: '18px', textAlign: 'center' }}>
+              <p style={{ textAlign: 'center' }}>
                 Get a 5% monthly referral fee per production <br />
                 that signs up because of your referral! <br />
                 <span style={{ color: '#787B83' }}>

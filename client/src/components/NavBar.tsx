@@ -1,5 +1,5 @@
 import { Tab, Tabs, useMediaQuery } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   background,
@@ -26,8 +26,12 @@ const NavBar: React.FC<NavBarProps> = ({
   scrollToWhatWeDoOnClick,
   scrollToMemberShipPerksOnClick,
 }) => {
-  const [value, setValue] = React.useState('work')
+  const [value, setValue] = useState('work')
   const isTablet = useMediaQuery(`(max-width:${tabletView})`)
+
+  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+    setValue(newValue)
+  }
 
   const styles = {
     navContainer: {
@@ -72,10 +76,6 @@ const NavBar: React.FC<NavBarProps> = ({
     tabDesktopView: {
       display: isTablet ? 'none' : 'inline',
     },
-  }
-
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue)
   }
 
   // console.log('is tablet', isTablet)

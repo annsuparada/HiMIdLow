@@ -46,9 +46,6 @@ const DetailSection: React.FC<DetailSectionProps> = ({
       borderRadius: '10px',
       boxShadow: '0 6px 45px 0px #261AAB33',
     },
-    p: {
-      fontSize: '18px',
-    },
     quoteImage: {
       position: 'absolute' as 'absolute',
       transform: 'translate(-50%, -50%)',
@@ -81,14 +78,12 @@ const DetailSection: React.FC<DetailSectionProps> = ({
       <div style={styles.cardContainer}>
         <Card sx={styles.card}>
           <img src={pointerIcon} style={styles.icon} alt="arrow icon" />
-          <p style={styles.p}>
-            Choose a plan and request as many mixes or edits as you'd like!
-          </p>
+          <p>Choose a plan and request as many mixes or edits as you'd like!</p>
         </Card>
 
         <Card sx={styles.card}>
           <img src={volumeUpIcon} style={styles.icon} alt="arrow icon" />
-          <p style={styles.p}>
+          <p>
             Get Your mixes fast! Usually within 1 to 3 business day. <br />
             Monday thru Friday.
           </p>
@@ -96,7 +91,7 @@ const DetailSection: React.FC<DetailSectionProps> = ({
 
         <Card sx={styles.card}>
           <img src={arrowIcon} style={styles.icon} alt="arrow icon" />
-          <p style={styles.p}>
+          <p>
             We'll adress any notes quickly until you're 100% satified.
             <br />
             Guaranteed!
@@ -129,8 +124,10 @@ const DetailSection: React.FC<DetailSectionProps> = ({
           <div style={styles.cardContainer}>
             {details.map((el, index) => (
               <div style={{ padding: '10px' }} key={index}>
-                <p style={{ fontWeight: 'bold' }}>{el.title}</p>
-                <p style={{ fontSize: '20px' }}>{el.description}</p>
+                <p style={{ fontWeight: 'bold', fontSize: '20px' }}>
+                  {el.title}
+                </p>
+                <p>{el.description}</p>
               </div>
             ))}
           </div>
@@ -198,8 +195,8 @@ const DetailSection: React.FC<DetailSectionProps> = ({
       <div style={styles.cardContainer}>
         {membershipPerks.map((el, index) => (
           <div style={{ padding: '0 10px' }} key={index}>
-            <p style={{ fontWeight: 'bold' }}>{el.title}</p>
-            <p style={{ fontSize: '20px' }}>{el.description}</p>
+            <p style={{ fontWeight: 'bold', fontSize: '20px' }}>{el.title}</p>
+            <p>{el.description}</p>
           </div>
         ))}
       </div>

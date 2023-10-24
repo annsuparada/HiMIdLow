@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import NavBar from './components/NavBar'
 import PageContainer from './components/PageContainer'
 import Homepage from './pages/Homepage'
+import TosPage from './pages/TosPage'
 import { background, theme } from './theme'
 
 const App: React.FC = () => {
@@ -18,6 +19,7 @@ const App: React.FC = () => {
       targetSection.scrollIntoView({ behavior: 'smooth' })
     }
   }
+
   return (
     <ThemeProvider theme={theme}>
       <Router>
@@ -42,6 +44,7 @@ const App: React.FC = () => {
                 />
               }
             />
+            <Route path="/terms-and-conditions" element={<TosPage />} />
           </Routes>
         </PageContainer>
         <Footer />
