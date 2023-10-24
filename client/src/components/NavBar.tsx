@@ -109,10 +109,13 @@ const NavBar: React.FC<NavBarProps> = ({
               onClick={scrollToWhatWeDoOnClick}
             />
             <Tab
-              value="benefits"
-              label="Benefits"
+              value="pricing"
+              label={
+                <Link to="/pricing" style={styles.link}>
+                  Pricing
+                </Link>
+              }
               sx={styles.tab}
-              onClick={scrollToMemberShipPerksOnClick}
             />
             <Tab
               value="contact"

@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import NavBar from './components/NavBar'
 import PageContainer from './components/PageContainer'
 import Homepage from './pages/Homepage'
+import PricingPage from './pages/Pricing'
 import TosPage from './pages/TosPage'
 import { background, theme } from './theme'
 
@@ -45,6 +46,7 @@ const App: React.FC = () => {
               }
             />
             <Route path="/terms-and-conditions" element={<TosPage />} />
+            <Route path="/pricing" element={<PricingPage />} />
           </Routes>
         </PageContainer>
         <Footer />

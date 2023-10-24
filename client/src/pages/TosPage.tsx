@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import HeadingTitle from '../components/HeadingTitle'
 import MainWrapper from '../components/MainWrapper'
 import ScrollToTop from '../components/ScrollToTop'
 import { background } from '../theme'
@@ -15,11 +16,7 @@ const TosPage: React.FC = () => {
 
   return (
     <MainWrapper backgroundColor={background}>
-      <img
-        src="https://res.cloudinary.com/dejr86qx8/image/upload/v1698121599/HIMidLow/Untitled_design_1_dvnexa.png"
-        alt="mix sound"
-        style={{ width: '100%' }}
-      />
+      <HeadingTitle title="Terms & Conditions" />
       <div style={styles.container}>
         <ScrollToTop />
 
