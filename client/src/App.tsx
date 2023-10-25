@@ -8,6 +8,7 @@ import Homepage from './pages/Homepage'
 import PricingPage from './pages/Pricing'
 import TosPage from './pages/TosPage'
 import WhatWeDoPage from './pages/WhatWeDoPage'
+import WorkPage from './pages/WorkPage'
 import { background, theme } from './theme'
 
 const App: React.FC = () => {
@@ -44,6 +45,7 @@ const App: React.FC = () => {
             <Route path="/terms-and-conditions" element={<TosPage />} />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/what-we-do" element={<WhatWeDoPage />} />
+            <Route path="/work" element={<WorkPage />} />
           </Routes>
         </PageContainer>
         <Footer />

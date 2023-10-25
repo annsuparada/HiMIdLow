@@ -88,7 +88,7 @@ const NavBar: React.FC = () => {
             <Tab
               value="work"
               label={
-                <Link to="#work" style={styles.link}>
+                <Link to="/work" style={styles.link}>
                   Work
                 </Link>
               }
