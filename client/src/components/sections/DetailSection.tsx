@@ -68,9 +68,15 @@ const DetailSection: React.FC<DetailSectionProps> = ({
   return (
     <div style={styles.container} id={whatWeDoId}>
       <h1 style={styles.h1}>A new way to do sound.</h1>
-      <p style={{ textAlign: 'center' }}>
-        Easier, Faster, and way less of a heache!
-      </p>
+      <div style={{ maxWidth: '700px', margin: '0 auto' }}>
+        <p style={{ textAlign: 'center' }}>
+          HiMidLow is a sonic branding agency that brings your campaign to life
+          by giving you the very best sound Hollywood has to offer! We
+          specialize in high profile mixes, signature sounds and sonic identity.
+          Even better, the way we do business makes the entire process faster,
+          easier, and way less of a headache!
+        </p>
+      </div>
       <div style={styles.cardContainer}>
         <Card sx={styles.card}>
           <img src={pointerIcon} style={styles.icon} alt="arrow icon" />
