@@ -39,7 +39,7 @@ export const brandingList = [
     src:
       'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997229/HIMidLow/FX_ptxrkm.png',
     alt: 'FX logo',
-    width: '60px',
+    width: '70px',
   },
   {
     src:

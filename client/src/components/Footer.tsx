@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
           <div style={styles.gridItem}>
             <p style={styles.text}>
               HiMidLow is proud to support the <br />
-              Motion Picture Editors guild and the <br />
+              Motion Picture Editors Guild and the <br />
               Cinema Audio Society!
             </p>
             <div>

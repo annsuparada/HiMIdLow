@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToMembershipOnClick }) => {
       </div>
       <div style={{ maxWidth: '400px', margin: '0 auto', textAlign: 'center' }}>
         <p style={styles.p}>
-          Expand your reach with wold class sound for a flat monthly fee.
+          Expand your reach with world class sound for a flat monthly fee.
         </p>
       </div>
       <Button

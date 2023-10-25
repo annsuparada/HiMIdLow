@@ -130,12 +130,12 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
             </div>
             <div style={styles.gridItem}>
               <ul>
-                <li>More than 6 active projects at a time.</li>
+                <li>More than 4 active projects at a time.</li>
                 <li>Campaign level sound design. Immediate turn around.</li>
                 <li>Signature Sounds or Sonic logos.</li>
                 <li>VO or Composer support.</li>
-                <li> Mixes in Dolby ATMOS You might even need less of us.</li>
-                <li>No worries, let’s talk.</li>
+                <li> Mixes in Dolby ATMOS.</li>
+                <li>You might even need less of us. No worries, let’s talk.</li>
               </ul>
             </div>
 

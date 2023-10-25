@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles'
 
-export const primary = '#0034F0'
+export const primary = '#261AAB'
 export const secondary = '#21232a'
 export const error = '#cc0000' // need to update
 export const warning = '#f39c12' // need to update

@@ -47,7 +47,7 @@ const WorkSection: React.FC = () => {
         variant="contained"
         style={{ width: '200px', margin: '30px auto' }}
       >
-        See more works
+        See more work
       </Button>
     </div>
   )

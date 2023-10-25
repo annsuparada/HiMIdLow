@@ -1,5 +1,5 @@
 import { Tab, Tabs, useMediaQuery } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   background,
@@ -16,10 +16,6 @@ import NavBarMobile from './NavBarMobile'
 const NavBar: React.FC = () => {
   const [value, setValue] = useState('work')
   const isTablet = useMediaQuery(`(max-width:${tabletView})`)
-
-  useEffect(() => {
-    setValue('work')
-  }, [])
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     console.log('event', event.target, newValue)

@@ -138,7 +138,7 @@ const DetailSection: React.FC<DetailSectionProps> = ({
       <div style={{ maxWidth: '600px', margin: '6rem auto 6rem' }}>
         <img src={quote} alt="quote icon" style={styles.quoteImage} />
         <div style={styles.quoteContainer}>
-          <p style={{ textAlign: 'center' }}>You're Wizard!</p>
+          <p style={{ textAlign: 'center' }}>You're a Wizard!</p>
           <p style={{ textAlign: 'center' }}>
             -Simon English @ Common Table Creative
           </p>
