@@ -10,9 +10,9 @@ export const brandingList = [
   },
   {
     src:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997589/HIMidLow/freeform_v0oazd.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698197416/Freeform_1_la59an.png',
     alt: 'Freefrom logo',
-    width: '60px',
+    width: '80px',
   },
   {
     src:
@@ -32,12 +32,12 @@ export const brandingList = [
     alt: 'Carls Jr. logo',
     width: '60px',
   },
-  {
-    src:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997228/HIMidLow/buddhajones_xyk1bs.png',
-    alt: 'buddha jones logo',
-    width: '90px',
-  },
+  // {
+  //   src:
+  //     'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997228/HIMidLow/buddhajones_xyk1bs.png',
+  //   alt: 'buddha jones logo',
+  //   width: '90px',
+  // },
   {
     src:
       'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997229/HIMidLow/FX_ptxrkm.png',
@@ -56,7 +56,12 @@ export const brandingList = [
     alt: 'Nickelodeon logo',
     width: '80px',
   },
-  { src: warnerBros, alt: 'Warner Bros', width: '60px' },
+  {
+    src:
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698197305/Pique_Action_Logo_1_k1ugsp.svg',
+    alt: 'Pique action logo',
+    width: '80px',
+  },
   {
     src:
       'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997230/HIMidLow/nbc_qvnbe0.png',
@@ -67,29 +72,29 @@ export const brandingList = [
     src:
       'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997228/HIMidLow/CBS_xhmxxr.png',
     alt: 'CBS logo',
-    width: '130px',
+    width: '110px',
   },
-  {
-    src:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997229/HIMidLow/Greenhouse_v3zvda.webp',
-    alt: 'Green House logo',
-    width: '80px',
-  },
-  {
-    src:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997233/HIMidLow/wildcard_vq9mnc.jpg',
-    alt: 'Wild Card Creative Group logo',
-    width: '130px',
-  },
-]
-
-export const brandingListLastRow = [
+  // {
+  //   src:
+  //     'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997229/HIMidLow/Greenhouse_v3zvda.webp',
+  //   alt: 'Green House logo',
+  //   width: '80px',
+  // },
+  // {
+  //   src:
+  //     'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997233/HIMidLow/wildcard_vq9mnc.jpg',
+  //   alt: 'Wild Card Creative Group logo',
+  //   width: '130px',
+  // },
   {
     src:
       'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997231/HIMidLow/Sony-pictures_obbv5l.png',
     alt: 'Sony logo',
     width: '60px',
   },
+]
+
+export const brandingListLastRow = [
   {
     src:
       'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997228/HIMidLow/abc_c5age1.png',
@@ -102,12 +107,12 @@ export const brandingListLastRow = [
     alt: 'Hulu logo',
     width: '90px',
   },
-  {
-    src:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997233/HIMidLow/workshop-creative_da3qld.jpg',
-    alt: 'Workshop Creative logo',
-    width: '120px',
-  },
+  // {
+  //   src:
+  //     'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997233/HIMidLow/workshop-creative_da3qld.jpg',
+  //   alt: 'Workshop Creative logo',
+  //   width: '120px',
+  // },
   {
     src:
       'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997228/HIMidLow/Bethesda_qhv9ac.png',

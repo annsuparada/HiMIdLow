@@ -15,16 +15,16 @@ const BrandingSection: React.FC = () => {
     },
     grid: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(7, 1fr)',
+      gridTemplateColumns: 'repeat(6, 1fr)',
       gap: '20px',
-      maxWidth: '1150px',
+      maxWidth: '1000px',
       margin: '0 auto',
     },
     gridLastRow: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(6, 1fr)',
+      gridTemplateColumns: 'repeat(4, 1fr)',
       gap: '20px',
-      maxWidth: '950px',
+      maxWidth: '700px',
       margin: '20px auto',
     },
   }
