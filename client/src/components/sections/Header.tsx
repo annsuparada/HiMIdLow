@@ -1,5 +1,6 @@
-import { Button } from '@mui/material'
+import { Button, useMediaQuery } from '@mui/material'
 import React from 'react'
+import { mobileView, tabletView } from '../../theme'
 
 interface HeaderProps {
   scrollToMembershipOnClick: (
@@ -7,6 +8,9 @@ interface HeaderProps {
   ) => void
 }
 const Header: React.FC<HeaderProps> = ({ scrollToMembershipOnClick }) => {
+  const isTablet = useMediaQuery(`(max-width:${tabletView})`)
+  const isMobile = useMediaQuery(`(max-width:${mobileView})`)
+
   const styles = {
     container: {
       display: 'grid',
@@ -27,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToMembershipOnClick }) => {
       height: '55px',
     },
     h1: {
-      fontSize: '64px',
+      fontSize: isMobile ? '30px' : isTablet ? '44px' : '64px',
       margin: '1rem',
     },
     p: {
