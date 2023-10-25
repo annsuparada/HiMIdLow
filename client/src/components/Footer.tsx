@@ -1,5 +1,5 @@
 import React from 'react'
-import { darkFont, white } from '../theme'
+import { darkFont, mobileView, white } from '../theme'
 import MainWrapper from './MainWrapper'
 import PageContainer from './PageContainer'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
@@ -7,15 +7,17 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import { Link } from 'react-router-dom'
+import { useMediaQuery } from '@mui/material'
 
 const Footer: React.FC = () => {
+  const isMobile = useMediaQuery(`(max-width:${mobileView})`)
   const styles = {
     text: {
       color: white,
     },
     grid: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(3, 1fr)',
+      gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
       gap: '15px',
     },
     gridItem: {
