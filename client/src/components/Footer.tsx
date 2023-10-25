@@ -36,7 +36,10 @@ const Footer: React.FC = () => {
         <div style={styles.grid}>
           <div style={styles.gridItem}>
             <p style={styles.text}>HiMidLow is located in sunny SoCal.</p>
-            <img src={LaLogo} alt="logo" />
+            <img
+              src="https://res.cloudinary.com/dejr86qx8/image/upload/v1698197299/LosAngeles_White_drqvuo.png"
+              alt="logo"
+            />
           </div>
           <div style={styles.gridItem}>
             <p style={styles.text}>

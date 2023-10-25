@@ -1,6 +1,3 @@
-const warnerBros =
-  'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997233/HIMidLow/WarnerBros_zb6xpk.png'
-
 export const brandingList = [
   {
     src:
