@@ -192,7 +192,7 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
               </Button>
             </div>
 
-            <div style={styles.lastItem}>
+            {/* <div style={styles.lastItem}>
               <h1 style={styles.h1}>Refer a friend!</h1>
               <p style={{ textAlign: 'center' }}>
                 Get a 5% monthly referral fee per production <br />
@@ -201,7 +201,7 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
                   *terms and conditions may apply.
                 </span>
               </p>
-            </div>
+            </div> */}
           </div>
         </MainWrapper>
       </PageContainer>
