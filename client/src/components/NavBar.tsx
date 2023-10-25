@@ -22,21 +22,19 @@ const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
   const isTablet = useMediaQuery(`(max-width:${tabletView})`)
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    console.log('event', event.target, newValue)
     setValue(newValue)
   }
 
   const styles = {
     navContainer: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(2, 1fr)',
-      justifycontent: 'space-between',
-      paddingTop: '18px',
-      // backgroundColor: isTablet ? 'red' : 'blue',
+      gridTemplateColumns: isTablet ? '1fr' : 'repeat(2, 1fr)',
+      justifycontent: isTablet ? 'center' : 'space-between',
+      padding: '18px 5px 0',
     },
     tabContainer: {
       display: 'flex',
-      justifyContent: 'flex-end',
+      justifyContent: isTablet ? 'center' : 'flex-end',
     },
     tab: {
       color: darkFont,
@@ -62,21 +60,23 @@ const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
       width: '150px',
       paddingTop: '20px',
     },
+    logoContainer: {
+      display: 'flex',
+      justifyContent: isTablet ? 'center' : 'left',
+    },
     moblieMenu: {
-      // display: isTablet ? 'inline' : 'none',
       display: 'none',
     },
-    tabDesktopView: {
-      display: isTablet ? 'none' : 'inline',
-    },
+    tabDesktopView: {},
   }
-  // console.log('is tablet', isTablet)
   return (
     <MainWrapper backgroundColor={background}>
-      <div style={styles.navContainer}>
-        <Link to="/" onClick={(event) => handleChange(event, 'work')}>
-          <img src={logo} alt="Low Mid Hight Logo" style={styles.logo} />
-        </Link>
+      <div style={styles.navContainer} className="nav-container">
+        <div style={styles.logoContainer}>
+          <Link to="/">
+            <img src={logo} alt="Low Mid Hight Logo" style={styles.logo} />
+          </Link>
+        </div>
         <div style={styles.tabContainer}>
           <Tabs
             value={value}
