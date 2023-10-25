@@ -19,7 +19,6 @@ const DetailSection: React.FC<DetailSectionProps> = ({
   const styles = {
     container: {
       paddingTop: '4rem',
-      // paddingBottom: '7rem',
     },
     h1: { textAlign: 'center' as 'center', fontSize: '44px' },
     cardContainer: {
