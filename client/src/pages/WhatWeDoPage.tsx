@@ -2,11 +2,10 @@ import { useMediaQuery } from '@mui/material'
 import React from 'react'
 import NavBar from '../components/NavBar'
 import DetailSection from '../components/sections/DetailSection'
-import { darkBackground, mobileView, tabletView } from '../theme'
+import { darkBackground, tabletView } from '../theme'
 
 const WhatWeDoPage: React.FC = () => {
   const isTablet = useMediaQuery(`(max-width:${tabletView})`)
-  const isMobile = useMediaQuery(`(max-width:${mobileView})`)
 
   const styles = {
     container: {
