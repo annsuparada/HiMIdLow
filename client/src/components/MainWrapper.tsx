@@ -5,18 +5,20 @@ interface MainWrapperProps {
   children: ReactNode
   backgroundColor: string
   minHeight?: string
+  padding?: string
 }
 
 const MainWrapper: React.FC<MainWrapperProps> = ({
   children,
   backgroundColor,
   minHeight,
+  padding,
 }) => {
   const styles = {
     container: {
       maxWidth: desktopView,
       margin: '0 auto',
-      padding: 0,
+      padding: padding ? padding : 0,
       backgroundColor: backgroundColor,
       minHeight: minHeight ? minHeight : 'none',
     },

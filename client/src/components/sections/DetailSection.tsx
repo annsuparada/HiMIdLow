@@ -1,4 +1,4 @@
-import { Button, Card } from '@mui/material'
+import { Card } from '@mui/material'
 import React from 'react'
 import { darkBackground, lightPurple } from '../../theme'
 import arrowIcon from '../../logo/arrows-repeat-solid.svg'
@@ -6,24 +6,20 @@ import pointerIcon from '../../logo/bullseye-pointer.svg'
 import volumeUpIcon from '../../logo/volume-up.svg'
 import quote from '../../logo/Quote.svg'
 import MainWrapper from '../MainWrapper'
-import { details, membershipPerks } from '../../data'
+import { details } from '../../data'
 
 interface DetailSectionProps {
-  scrollToMembershipOnClick: (
-    event: React.MouseEvent<HTMLElement, MouseEvent>,
-  ) => void
   whatWeDoId: string
   membershipPerksId: string
 }
 const DetailSection: React.FC<DetailSectionProps> = ({
-  scrollToMembershipOnClick,
   whatWeDoId,
   membershipPerksId,
 }) => {
   const styles = {
     container: {
       paddingTop: '4rem',
-      paddingBottom: '7rem',
+      // paddingBottom: '7rem',
     },
     h1: { textAlign: 'center' as 'center', fontSize: '44px' },
     cardContainer: {
@@ -172,33 +168,6 @@ const DetailSection: React.FC<DetailSectionProps> = ({
             </div>
           </div>
         </MainWrapper>
-      </div>
-
-      <div style={{ marginTop: '80px' }} id={membershipPerksId}>
-        <h1 style={styles.h1}>Membership perks!</h1>
-        <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-          <p style={{ textAlign: 'center' }}>
-            Working with us is so seamless and easy, you’ll never need to go
-            anywhere else.
-          </p>
-          <Button
-            onClick={scrollToMembershipOnClick}
-            variant="contained"
-            size="large"
-            sx={{ display: 'block', margin: '45px auto' }}
-          >
-            See our Plans
-          </Button>
-        </div>
-      </div>
-
-      <div style={styles.cardContainer}>
-        {membershipPerks.map((el, index) => (
-          <div style={{ padding: '0 10px' }} key={index}>
-            <p style={{ fontWeight: 'bold', fontSize: '20px' }}>{el.title}</p>
-            <p>{el.description}</p>
-          </div>
-        ))}
       </div>
     </div>
   )

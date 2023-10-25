@@ -6,6 +6,7 @@ import { background } from '../theme'
 import DetailSection from '../components/sections/DetailSection'
 import MembershipLevels from '../components/sections/MembershipLevels'
 import ScrollToTop from '../components/ScrollToTop'
+import Benefits from '../components/sections/Benefits'
 
 interface HomepageProps {
   scrollToMembershipOnClick: (
@@ -31,8 +32,8 @@ const Homepage: React.FC<HomepageProps> = ({
       <DetailSection
         whatWeDoId={whatWeDoId}
         membershipPerksId={membershipPerksId}
-        scrollToMembershipOnClick={scrollToMembershipOnClick}
       />
+      <Benefits scrollToMembershipOnClick={scrollToMembershipOnClick} />
       <MembershipLevels membershipId={membershipId} />
     </div>
   )
