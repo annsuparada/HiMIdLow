@@ -4,6 +4,7 @@ import modok from '../../img/modok.jpg'
 import woke from '../../img/Woke.jpg'
 import dopesick from '../../img/dopesick.jpg'
 import VideoModal from '../VideoModal'
+import { Button } from '@mui/material'
 
 const WorkSection: React.FC = () => {
   const styles = {
@@ -71,6 +72,14 @@ const WorkSection: React.FC = () => {
           />
         ))}
       </div>
+
+      <Button
+        href="/work"
+        variant="contained"
+        style={{ width: '200px', margin: '30px auto' }}
+      >
+        See more works
+      </Button>
     </div>
   )
 }
