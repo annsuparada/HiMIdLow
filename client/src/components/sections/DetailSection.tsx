@@ -1,11 +1,6 @@
 import { Card, useMediaQuery } from '@mui/material'
 import React from 'react'
-import {
-  darkBackground,
-  lightPurple,
-  mobileView,
-  tabletView,
-} from '../../theme'
+import { darkBackground, lightPurple, tabletView } from '../../theme'
 import arrowIcon from '../../logo/arrows-repeat-solid.svg'
 import pointerIcon from '../../logo/bullseye-pointer.svg'
 import volumeUpIcon from '../../logo/volume-up.svg'
