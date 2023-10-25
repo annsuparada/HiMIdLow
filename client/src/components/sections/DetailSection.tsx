@@ -18,7 +18,7 @@ interface DetailSectionProps {
 }
 const DetailSection: React.FC<DetailSectionProps> = ({ whatWeDoId }) => {
   const isTablet = useMediaQuery(`(max-width:${tabletView})`)
-  const isMobile = useMediaQuery(`(max-width:${mobileView})`)
+
   const styles = {
     container: {
       padding: '4rem 0 4rem',

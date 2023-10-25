@@ -1,6 +1,7 @@
-import { Button } from '@mui/material'
+import { Button, useMediaQuery } from '@mui/material'
 import React from 'react'
 import { membershipPerks } from '../../data'
+import { mobileView, tabletView } from '../../theme'
 import ScrollToTop from '../ScrollToTop'
 
 interface BenefitsProps {
@@ -14,6 +15,9 @@ const Benefits: React.FC<BenefitsProps> = ({
   scrollToMembershipOnClick,
   disabledButton,
 }) => {
+  const isTablet = useMediaQuery(`(max-width:${tabletView})`)
+  const isMobile = useMediaQuery(`(max-width:${mobileView})`)
+
   const styles = {
     h1: { textAlign: 'center' as 'center', fontSize: '44px' },
     cardContainer: {
@@ -21,7 +25,11 @@ const Benefits: React.FC<BenefitsProps> = ({
       margin: '4rem auto 0',
       display: 'grid',
       gap: '2.5rem',
-      gridTemplateColumns: 'repeat(3, 1fr)',
+      gridTemplateColumns: isMobile
+        ? '1fr'
+        : isTablet
+        ? '1fr 1fr'
+        : 'repeat(3, 1fr)',
     },
   }
   return (
