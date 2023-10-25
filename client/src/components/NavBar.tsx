@@ -11,7 +11,6 @@ import {
 } from '../theme'
 import MainWrapper from './MainWrapper'
 import logo from '../logo/LargeLogoBlack.svg'
-import NavBarMobile from './NavBarMobile'
 
 interface NavBarProps {
   pathname: string
@@ -42,6 +41,13 @@ const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
         fontWeight: 'bold',
       },
     },
+    desktopTab: {
+      color: darkFont,
+      '&.Mui-selected': {
+        fontWeight: 'bold',
+      },
+      display: isTablet ? 'none' : 'in-line',
+    },
     link: {
       color: darkFont,
       textDecoration: 'none',
@@ -67,7 +73,11 @@ const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
     moblieMenu: {
       display: 'none',
     },
-    tabDesktopView: {},
+    moblieViewTab: {
+      maxWidth: '100%',
+      display: isTablet ? 'flex' : 'none',
+      justifyContent: 'center',
+    },
   }
   return (
     <MainWrapper backgroundColor={background}>
@@ -83,7 +93,6 @@ const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
             onChange={handleChange}
             textColor="secondary"
             indicatorColor="secondary"
-            sx={styles.tabDesktopView}
           >
             <Tab
               value="work"
@@ -123,12 +132,32 @@ const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
                   Let's talk
                 </Link>
               }
+              sx={styles.desktopTab}
+            />
+          </Tabs>
+        </div>
+        {/* tablet/moblie */}
+        <div style={styles.moblieViewTab}>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            textColor="secondary"
+            indicatorColor="secondary"
+          >
+            <Tab
+              value="contact"
+              label={
+                <Link
+                  to="https://calendly.com/himidlow"
+                  target="_blank"
+                  style={styles.linkBotton}
+                >
+                  Let's talk
+                </Link>
+              }
               sx={styles.tab}
             />
           </Tabs>
-          <div style={styles.moblieMenu}>
-            <NavBarMobile />
-          </div>
         </div>
       </div>
     </MainWrapper>
