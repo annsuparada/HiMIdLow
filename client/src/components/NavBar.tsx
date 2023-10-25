@@ -13,8 +13,12 @@ import MainWrapper from './MainWrapper'
 import logo from '../logo/LargeLogoBlack.svg'
 import NavBarMobile from './NavBarMobile'
 
-const NavBar: React.FC = () => {
-  const [value, setValue] = useState('work')
+interface NavBarProps {
+  pathname: string
+}
+
+const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
+  const [value, setValue] = useState(pathname)
   const isTablet = useMediaQuery(`(max-width:${tabletView})`)
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {

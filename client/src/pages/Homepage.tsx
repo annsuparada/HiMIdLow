@@ -7,6 +7,7 @@ import DetailSection from '../components/sections/DetailSection'
 import MembershipLevels from '../components/sections/MembershipLevels'
 import ScrollToTop from '../components/ScrollToTop'
 import Benefits from '../components/sections/Benefits'
+import NavBar from '../components/NavBar'
 
 interface HomepageProps {
   scrollToMembershipOnClick: (
@@ -24,18 +25,21 @@ const Homepage: React.FC<HomepageProps> = ({
   membershipPerksId,
 }) => {
   return (
-    <div style={{ backgroundColor: background, width: '100%' }}>
-      <ScrollToTop />
-      <Header scrollToMembershipOnClick={scrollToMembershipOnClick} />
-      <WorkSection />
-      <BrandingSection />
-      <DetailSection
-        whatWeDoId={whatWeDoId}
-        membershipPerksId={membershipPerksId}
-      />
-      <Benefits scrollToMembershipOnClick={scrollToMembershipOnClick} />
-      <MembershipLevels membershipId={membershipId} />
-    </div>
+    <>
+      <NavBar pathname="home" />
+      <div style={{ backgroundColor: background, width: '100%' }}>
+        <ScrollToTop />
+        <Header scrollToMembershipOnClick={scrollToMembershipOnClick} />
+        <WorkSection />
+        <BrandingSection />
+        <DetailSection
+          whatWeDoId={whatWeDoId}
+          membershipPerksId={membershipPerksId}
+        />
+        <Benefits scrollToMembershipOnClick={scrollToMembershipOnClick} />
+        <MembershipLevels membershipId={membershipId} />
+      </div>
+    </>
   )
 }
 

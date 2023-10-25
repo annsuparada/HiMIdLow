@@ -1,6 +1,7 @@
 import { Button } from '@mui/material'
 import React from 'react'
 import MainWrapper from '../components/MainWrapper'
+import NavBar from '../components/NavBar'
 import ScrollToTop from '../components/ScrollToTop'
 import VideoModal from '../components/VideoModal'
 import { videoListWorkPage } from '../data'
@@ -24,33 +25,36 @@ const WorkPage: React.FC = () => {
     },
   }
   return (
-    <MainWrapper backgroundColor={background} minHeight="64vh">
-      <ScrollToTop />
-      <div style={styles.container}>
-        <div style={styles.textContainer}>
-          <h1>Check out some of our work!</h1>
-        </div>
+    <>
+      <NavBar pathname="work" />
+      <MainWrapper backgroundColor={background} minHeight="64vh">
+        <ScrollToTop />
+        <div style={styles.container}>
+          <div style={styles.textContainer}>
+            <h1>Check out some of our work!</h1>
+          </div>
 
-        <div style={styles.imgContainer}>
-          {videoListWorkPage.map((item, index) => (
-            <VideoModal
-              key={index}
-              imgUrl={item.imgUrl}
-              alt={item.alt}
-              videoUrl={item.videoUrl}
-            />
-          ))}
-        </div>
+          <div style={styles.imgContainer}>
+            {videoListWorkPage.map((item, index) => (
+              <VideoModal
+                key={index}
+                imgUrl={item.imgUrl}
+                alt={item.alt}
+                videoUrl={item.videoUrl}
+              />
+            ))}
+          </div>
 
-        <Button
-          href="/pricing"
-          variant="contained"
-          style={{ width: '200px', margin: '30px auto' }}
-        >
-          See our plans
-        </Button>
-      </div>
-    </MainWrapper>
+          <Button
+            href="/pricing"
+            variant="contained"
+            style={{ width: '200px', margin: '30px auto' }}
+          >
+            See our plans
+          </Button>
+        </div>
+      </MainWrapper>
+    </>
   )
 }
 
