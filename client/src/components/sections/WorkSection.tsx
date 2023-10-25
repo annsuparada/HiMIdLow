@@ -1,14 +1,18 @@
 import React from 'react'
 import VideoModal from '../VideoModal'
-import { Button } from '@mui/material'
+import { Button, useMediaQuery } from '@mui/material'
 import { videoImgListHomePage } from '../../data'
+import { mobileView, tabletView } from '../../theme'
 
 const WorkSection: React.FC = () => {
+  const isTablet = useMediaQuery(`(max-width:${tabletView})`)
+  const isMobile = useMediaQuery(`(max-width:${mobileView})`)
   const styles = {
     container: {
       display: 'grid',
       justifyContent: 'center',
       marginTop: '2rem',
+      padding: '5px',
     },
     textContainer: {
       maxWidth: '600px',
@@ -16,7 +20,11 @@ const WorkSection: React.FC = () => {
     },
     imgContainer: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(4, 1fr)',
+      gridTemplateColumns: isMobile
+        ? '1fr'
+        : isTablet
+        ? '1fr 1fr'
+        : 'repeat(4, 1fr)',
       gap: '10px',
     },
     img: {
