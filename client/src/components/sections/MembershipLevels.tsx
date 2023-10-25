@@ -29,7 +29,7 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
     tableGridMobile: {
       maxWidth: '1083px',
       margin: '0 auto',
-      display: isMobile ? 'grid' : 'mobile',
+      display: isMobile ? 'grid' : 'none',
       gridTemplateColumns: '1fr',
       borderTop: '2px solid #BCC0DA',
       borderLeft: '2px solid #BCC0DA',
