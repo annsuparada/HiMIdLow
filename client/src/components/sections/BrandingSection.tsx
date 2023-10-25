@@ -1,12 +1,15 @@
 import React from 'react'
-import { darkBackground } from '../../theme'
+import { darkBackground, mobileView, tabletView } from '../../theme'
 import { brandingList, brandingListLastRow } from '../../data'
+import { useMediaQuery } from '@mui/material'
 
 const BrandingSection: React.FC = () => {
+  const isTablet = useMediaQuery(`(max-width:${tabletView})`)
+  const isMobile = useMediaQuery(`(max-width:${mobileView})`)
+
   const styles = {
     container: {
-      paddingTop: '3rem',
-      paddingBottom: '3rem',
+      padding: '3rem 15px 3rem',
       backgroundColor: darkBackground,
     },
     textContainer: {
@@ -15,7 +18,11 @@ const BrandingSection: React.FC = () => {
     },
     grid: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(6, 1fr)',
+      gridTemplateColumns: isMobile
+        ? 'repeat(3, 1fr)'
+        : isTablet
+        ? 'repeat(4, 1fr)'
+        : 'repeat(6, 1fr)',
       gap: '20px',
       maxWidth: '1000px',
       margin: '0 auto',
