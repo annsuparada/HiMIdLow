@@ -36,7 +36,6 @@ const App: React.FC = () => {
                   }
                   membershipId={membershipId}
                   whatWeDoId={whatWeDoId}
-                  membershipPerksId={membershipPerksId}
                 />
               }
             />

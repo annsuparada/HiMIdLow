@@ -84,7 +84,7 @@ const WhatWeDoPage: React.FC = () => {
             </div>
           </div>
         </div>
-        <DetailSection whatWeDoId="" membershipPerksId="" />
+        <DetailSection whatWeDoId="" />
       </div>
     </>
   )

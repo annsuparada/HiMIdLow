@@ -1,6 +1,11 @@
-import { Card } from '@mui/material'
+import { Card, useMediaQuery } from '@mui/material'
 import React from 'react'
-import { darkBackground, lightPurple } from '../../theme'
+import {
+  darkBackground,
+  lightPurple,
+  mobileView,
+  tabletView,
+} from '../../theme'
 import arrowIcon from '../../logo/arrows-repeat-solid.svg'
 import pointerIcon from '../../logo/bullseye-pointer.svg'
 import volumeUpIcon from '../../logo/volume-up.svg'
@@ -10,15 +15,13 @@ import { details } from '../../data'
 
 interface DetailSectionProps {
   whatWeDoId: string
-  membershipPerksId: string
 }
-const DetailSection: React.FC<DetailSectionProps> = ({
-  whatWeDoId,
-  membershipPerksId,
-}) => {
+const DetailSection: React.FC<DetailSectionProps> = ({ whatWeDoId }) => {
+  const isTablet = useMediaQuery(`(max-width:${tabletView})`)
+  const isMobile = useMediaQuery(`(max-width:${mobileView})`)
   const styles = {
     container: {
-      paddingTop: '4rem',
+      padding: '4rem 0 4rem',
     },
     h1: { textAlign: 'center' as 'center', fontSize: '44px' },
     cardContainer: {
@@ -26,7 +29,8 @@ const DetailSection: React.FC<DetailSectionProps> = ({
       margin: '4rem auto 8rem',
       display: 'grid',
       gap: '2.5rem',
-      gridTemplateColumns: 'repeat(3, 1fr)',
+      gridTemplateColumns: isTablet ? '1fr' : 'repeat(3, 1fr)',
+      padding: '0 10px',
     },
     icon: {
       width: '4rem',
@@ -40,6 +44,7 @@ const DetailSection: React.FC<DetailSectionProps> = ({
       padding: '35px',
       borderRadius: '10px',
       boxShadow: '0 6px 45px 0px #261AAB33',
+      margin: '0 auto',
     },
     quoteImage: {
       position: 'absolute' as 'absolute',
@@ -62,6 +67,7 @@ const DetailSection: React.FC<DetailSectionProps> = ({
       paddingTop: '2rem',
       paddingBottom: '1rem',
     },
+    mixingList: {},
   }
 
   return (
@@ -99,7 +105,7 @@ const DetailSection: React.FC<DetailSectionProps> = ({
           </p>
         </Card>
       </div>
-      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+      <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 45px ' }}>
         <img src={quote} alt="quote icon" style={styles.quoteImage} />
         <div style={styles.quoteContainer}>
           <p>
@@ -115,7 +121,9 @@ const DetailSection: React.FC<DetailSectionProps> = ({
             Sound so good, you'll <br />
             never go back!
           </h1>
-          <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+          <div
+            style={{ maxWidth: '600px', margin: '0 auto', padding: '0 10px' }}
+          >
             <p style={{ textAlign: 'center' }}>
               HiMidLow replaces unreliable freelancers and expensive studios for
               one flat monthly fee, and delivers mixes so good it’ll blow your
@@ -124,7 +132,10 @@ const DetailSection: React.FC<DetailSectionProps> = ({
           </div>
           <div style={styles.cardContainer}>
             {details.map((el, index) => (
-              <div style={{ padding: '10px' }} key={index}>
+              <div
+                style={{ padding: '10px', maxWidth: '450px', margin: '0 auto' }}
+                key={index}
+              >
                 <p style={{ fontWeight: 'bold', fontSize: '20px' }}>
                   {el.title}
                 </p>
@@ -135,7 +146,13 @@ const DetailSection: React.FC<DetailSectionProps> = ({
         </MainWrapper>
       </div>
 
-      <div style={{ maxWidth: '600px', margin: '6rem auto 6rem' }}>
+      <div
+        style={{
+          maxWidth: '600px',
+          margin: '6rem auto 6rem',
+          padding: '0 45px',
+        }}
+      >
         <img src={quote} alt="quote icon" style={styles.quoteImage} />
         <div style={styles.quoteContainer}>
           <p style={{ textAlign: 'center' }}>You're a Wizard!</p>
@@ -150,26 +167,32 @@ const DetailSection: React.FC<DetailSectionProps> = ({
           <h1 style={styles.h1}>More than just mixes!</h1>
           <p style={{ textAlign: 'center' }}>Whatever you need, we got you!</p>
           <div style={styles.cardContainer}>
-            <div>
-              <p>Mixing</p>
-              <p>Editorial</p>
-              <p>Audio Repair</p>
-              <p>Sound Design</p>
-              <p>Signature Sounds</p>
+            <div style={styles.mixingList}>
+              <ul>
+                <li>Mixing</li>
+                <li>Editorial</li>
+                <li>Audio Repair</li>
+                <li>Sound Design</li>
+                <li>Signature Sounds</li>
+              </ul>
             </div>
-            <div>
-              <p>Music mixing</p>
-              <p>Podcast production</p>
-              <p>Audio Consulting</p>
-              <p>Composer referrals</p>
-              <p>Foley</p>
+            <div style={styles.mixingList}>
+              <ul>
+                <li>Music mixing</li>
+                <li>Podcast production</li>
+                <li>Audio Consulting</li>
+                <li>Composer referrals</li>
+                <li>Foley</li>
+              </ul>
             </div>
-            <div>
-              <p>ATMOS</p>
-              <p>Binaural audio</p>
-              <p>Game sound design</p>
-              <p>Sonic Identity and Branding</p>
-              <p>Scripted TV and Feature mixes</p>
+            <div style={styles.mixingList}>
+              <ul>
+                <li>ATMOS</li>
+                <li>Binaural audio</li>
+                <li>Game sound design</li>
+                <li>Sonic Identity and Branding</li>
+                <li>Scripted TV and Feature mixes</li>
+              </ul>
             </div>
           </div>
         </MainWrapper>

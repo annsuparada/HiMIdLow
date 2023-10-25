@@ -15,14 +15,12 @@ interface HomepageProps {
   ) => void
   whatWeDoId: string
   membershipId: string
-  membershipPerksId: string
 }
 
 const Homepage: React.FC<HomepageProps> = ({
   scrollToMembershipOnClick,
   whatWeDoId,
   membershipId,
-  membershipPerksId,
 }) => {
   return (
     <>
@@ -32,10 +30,7 @@ const Homepage: React.FC<HomepageProps> = ({
         <Header scrollToMembershipOnClick={scrollToMembershipOnClick} />
         <WorkSection />
         <BrandingSection />
-        <DetailSection
-          whatWeDoId={whatWeDoId}
-          membershipPerksId={membershipPerksId}
-        />
+        <DetailSection whatWeDoId={whatWeDoId} />
         <Benefits scrollToMembershipOnClick={scrollToMembershipOnClick} />
         <MembershipLevels membershipId={membershipId} />
       </div>
