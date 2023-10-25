@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  background-color: #efefef;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif; 
+  color: #21232a;
+  font-weight: 600;
+}
+
+p, a, label {
+  font-family: 'Plus Jakarta Sans', sans-serif; 
+  color: #21232a;
+}
+
+a {
+  font-family: 'Plus Jakarta Sans', sans-serif; 
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+li {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #21232a;
+  font-size: 18px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.dark-color-link {
+  color: #21232a;
+  text-decoration: none;
+}
+
+.dark-color-link:hover {
+  text-decoration: underline;
+}
