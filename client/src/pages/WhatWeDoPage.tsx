@@ -1,18 +1,23 @@
+import { useMediaQuery } from '@mui/material'
 import React from 'react'
 import NavBar from '../components/NavBar'
 import DetailSection from '../components/sections/DetailSection'
-import { darkBackground } from '../theme'
+import { darkBackground, mobileView, tabletView } from '../theme'
 
 const WhatWeDoPage: React.FC = () => {
+  const isTablet = useMediaQuery(`(max-width:${tabletView})`)
+  const isMobile = useMediaQuery(`(max-width:${mobileView})`)
+
   const styles = {
     container: {
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
+      gridTemplateColumns: isTablet ? '1fr' : '1fr 1fr',
       gap: '30px',
       maxWidth: '1200px',
       margin: '0 auto',
       padding: '35px',
     },
+    img: { maxWidth: isTablet ? '100%' : '500px', paddingTop: '17px' },
   }
   return (
     <>
@@ -50,7 +55,7 @@ const WhatWeDoPage: React.FC = () => {
             <img
               src="https://res.cloudinary.com/dejr86qx8/image/upload/v1698203954/caught-in-joy-ptVBlniJi50-unsplash_bwd8fr.jpg"
               alt="Hi Mid Low Studio"
-              style={{ maxWidth: '500px', paddingTop: '17px' }}
+              style={styles.img}
             />
           </div>
         </div>

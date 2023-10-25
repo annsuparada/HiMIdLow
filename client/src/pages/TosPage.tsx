@@ -11,7 +11,7 @@ const TosPage: React.FC = () => {
     container: {
       maxWidth: '1000px',
       margin: '25px auto',
-      paddingBottom: '25px',
+      padding: '0 15px 25px',
     },
   }
 
