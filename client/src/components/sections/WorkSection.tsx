@@ -1,10 +1,7 @@
 import React from 'react'
-import great from '../../img/great.jpg'
-import modok from '../../img/modok.jpg'
-import woke from '../../img/Woke.jpg'
-import dopesick from '../../img/dopesick.jpg'
 import VideoModal from '../VideoModal'
 import { Button } from '@mui/material'
+import { videoImgListHomePage } from '../../data'
 
 const WorkSection: React.FC = () => {
   const styles = {
@@ -28,33 +25,6 @@ const WorkSection: React.FC = () => {
     },
   }
 
-  const videoImgList = [
-    {
-      imgUrl: great,
-      imgHeight: '495px',
-      alt: 'The Great',
-      videoUrl: 'https://www.youtube.com/embed/MXy4PsQ2ymI?si=oYtz8kDgL2eJJ1fq',
-    },
-    {
-      imgUrl: modok,
-      imgHeight: '495px',
-      alt: 'MODOK',
-      videoUrl: 'https://www.youtube.com/embed/oSEWdhHBlYU?si=tEpHwrBs8A1rln6L',
-    },
-    {
-      imgUrl: woke,
-      imgHeight: '495px',
-      alt: 'WOKE',
-      videoUrl: 'https://www.youtube.com/embed/b5kODvhSRAE?si=VfoxVxXU7N_eCuSI',
-    },
-    {
-      imgUrl: dopesick,
-      imgHeight: '495px',
-      alt: 'Dopesick',
-      videoUrl: 'https://www.youtube.com/embed/lUVR63ZHLV4?si=xxQgWFjLnLz0XSuD',
-    },
-  ]
-
   return (
     <div style={styles.container}>
       <div style={styles.textContainer}>
@@ -62,11 +32,10 @@ const WorkSection: React.FC = () => {
       </div>
 
       <div style={styles.imgContainer}>
-        {videoImgList.map((item, index) => (
+        {videoImgListHomePage.map((item, index) => (
           <VideoModal
             key={index}
             imgUrl={item.imgUrl}
-            imgHeight={item.imgHeight}
             alt={item.alt}
             videoUrl={item.videoUrl}
           />

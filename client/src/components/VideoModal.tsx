@@ -8,13 +8,13 @@ import { white } from '../theme'
 interface VideoModelProps {
   imgUrl: string
   alt: string
-  imgHeight: string
+  // imgHeight: string
   videoUrl: string
 }
 
 const VideoModal: React.FC<VideoModelProps> = ({
   imgUrl,
-  imgHeight,
+  // imgHeight,
   videoUrl,
 }) => {
   const [open, setOpen] = useState(false)
@@ -63,7 +63,7 @@ const VideoModal: React.FC<VideoModelProps> = ({
           <CardActionArea>
             <CardMedia
               component="img"
-              height={imgHeight}
+              width="100%"
               image={imgUrl}
               alt="green iguana"
               sx={styles.cardMedia}

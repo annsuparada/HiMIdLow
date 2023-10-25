@@ -19,7 +19,7 @@ const HadingTitle: React.FC<HadingTitleProps> = ({ title }) => {
   return (
     <div style={styles.container}>
       <img
-        src="https://res.cloudinary.com/dejr86qx8/image/upload/v1698121599/HIMidLow/Untitled_design_1_dvnexa.png"
+        src="https://res.cloudinary.com/dejr86qx8/image/upload/v1698202248/Untitled_design_4_scxxoa.png"
         alt="mix sound"
         style={{ width: '100%' }}
       />
