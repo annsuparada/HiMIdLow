@@ -1,5 +1,5 @@
 import { Tab, Tabs, useMediaQuery } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   background,
@@ -13,23 +13,16 @@ import MainWrapper from './MainWrapper'
 import logo from '../logo/LargeLogoBlack.svg'
 import NavBarMobile from './NavBarMobile'
 
-interface NavBarProps {
-  scrollToWhatWeDoOnClick: (
-    event: React.MouseEvent<HTMLElement, MouseEvent>,
-  ) => void
-  scrollToMemberShipPerksOnClick: (
-    event: React.MouseEvent<HTMLElement, MouseEvent>,
-  ) => void
-}
-
-const NavBar: React.FC<NavBarProps> = ({
-  scrollToWhatWeDoOnClick,
-  scrollToMemberShipPerksOnClick,
-}) => {
+const NavBar: React.FC = () => {
   const [value, setValue] = useState('work')
   const isTablet = useMediaQuery(`(max-width:${tabletView})`)
 
+  useEffect(() => {
+    setValue('work')
+  }, [])
+
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+    console.log('event', event.target, newValue)
     setValue(newValue)
   }
 
@@ -77,12 +70,11 @@ const NavBar: React.FC<NavBarProps> = ({
       display: isTablet ? 'none' : 'inline',
     },
   }
-
   // console.log('is tablet', isTablet)
   return (
     <MainWrapper backgroundColor={background}>
       <div style={styles.navContainer}>
-        <Link to="/">
+        <Link to="/" onClick={(event) => handleChange(event, 'work')}>
           <img src={logo} alt="Low Mid Hight Logo" style={styles.logo} />
         </Link>
         <div style={styles.tabContainer}>

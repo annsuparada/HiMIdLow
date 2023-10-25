@@ -26,12 +26,7 @@ const App: React.FC = () => {
     <ThemeProvider theme={theme}>
       <Router>
         <PageContainer backgroundColor={background}>
-          <NavBar
-            scrollToWhatWeDoOnClick={() => scrollToSectionOnClick(whatWeDoId)}
-            scrollToMemberShipPerksOnClick={() =>
-              scrollToSectionOnClick(membershipPerksId)
-            }
-          />
+          <NavBar />
           <Routes>
             <Route
               path="/"
