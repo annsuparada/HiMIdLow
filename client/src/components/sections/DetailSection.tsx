@@ -15,9 +15,7 @@ const DetailSection: React.FC<DetailSectionProps> = ({ whatWeDoId }) => {
   const isTablet = useMediaQuery(`(max-width:${tabletView})`)
 
   const styles = {
-    container: {
-      padding: '4rem 0 4rem',
-    },
+    container: {},
     h1: { textAlign: 'center' as 'center', fontSize: '44px' },
     cardContainer: {
       maxWidth: '1300px',

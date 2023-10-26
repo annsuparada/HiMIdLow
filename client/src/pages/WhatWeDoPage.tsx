@@ -1,4 +1,4 @@
-import { useMediaQuery } from '@mui/material'
+import { Button, useMediaQuery } from '@mui/material'
 import React from 'react'
 import NavBar from '../components/NavBar'
 import DetailSection from '../components/sections/DetailSection'
@@ -85,10 +85,26 @@ const WhatWeDoPage: React.FC = () => {
                 work with HiMidLow, there’s a really good chance you’ll be
                 working directly with Andy.
               </p>
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <Button
+                  variant="contained"
+                  href="https://calendly.com/himidlow"
+                  target="_blank"
+                >
+                  Let's talk
+                </Button>
+              </div>
             </div>
           </div>
         </div>
         <DetailSection whatWeDoId="" />
+        <div
+          style={{ display: 'flex', justifyContent: 'center', padding: '20px' }}
+        >
+          <Button href="/pricing" variant="contained">
+            See our plans
+          </Button>
+        </div>
       </div>
     </>
   )

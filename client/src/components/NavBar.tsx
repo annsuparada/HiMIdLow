@@ -160,7 +160,7 @@ const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
             />
           </Tabs>
         </div>
-        <NavBarMobile />
+        {/* <NavBarMobile /> */}
       </div>
     </MainWrapper>
   )
