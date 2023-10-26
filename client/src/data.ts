@@ -188,7 +188,7 @@ export const videoImgListHomePage = [
     imgUrl:
       'https://res.cloudinary.com/dejr86qx8/image/upload/v1698199367/1_zjqlti.png',
     alt: 'The Great',
-    videoUrl: 'https://www.youtube.com/embed/MXy4PsQ2ymI?si=oYtz8kDgL2eJJ1fq',
+    videoUrl: 'https://www.youtube.com/embed/KmynXixC9W8?si=owrJiyb7c0ZaYZNR',
   },
   {
     imgUrl:
@@ -215,7 +215,7 @@ export const videoListWorkPage = [
     imgUrl:
       'https://res.cloudinary.com/dejr86qx8/image/upload/v1698199367/1_zjqlti.png',
     alt: 'The Great',
-    videoUrl: 'https://www.youtube.com/embed/MXy4PsQ2ymI?si=oYtz8kDgL2eJJ1fq',
+    videoUrl: 'https://www.youtube.com/embed/KmynXixC9W8?si=owrJiyb7c0ZaYZNR',
   },
   {
     imgUrl:
