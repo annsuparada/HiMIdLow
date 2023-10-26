@@ -33,6 +33,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToMembershipOnClick }) => {
     h1: {
       fontSize: isMobile ? '30px' : isTablet ? '44px' : '64px',
       margin: '1rem',
+      // textAlign: 'center' as 'center',
     },
     p: {
       fontSize: '24px',
@@ -42,11 +43,11 @@ const Header: React.FC<HeaderProps> = ({ scrollToMembershipOnClick }) => {
   return (
     <div style={styles.container}>
       <div style={styles.bigText}>
-        <h1 style={styles.h1}>Sonic brading done differently!</h1>
+        <h1 style={styles.h1}>Sonic branding done differently!</h1>
       </div>
       <div style={{ maxWidth: '400px', margin: '0 auto', textAlign: 'center' }}>
         <p style={styles.p}>
-          Expand your reach with world class sound for a flat monthly fee.
+          Expand your reach with world-class sound for a flat monthly fee.
         </p>
       </div>
       <Button
@@ -57,7 +58,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToMembershipOnClick }) => {
         See our Plans
       </Button>
       <div style={styles.smallText}>
-        <p style={styles.p}>You'll love us, guarnteed.</p>
+        <p style={styles.p}>You'll love us, guaranteed.</p>
       </div>
     </div>
   )

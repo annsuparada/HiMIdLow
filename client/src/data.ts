@@ -140,7 +140,7 @@ export const membershipPerks = [
       'All the mixes you need at a consistent flat price.  No more negotiating!',
   },
   {
-    title: 'World Class Sound',
+    title: 'World-class Sound',
     description:
       'We’ve got over 20 years experience editing, designing and mixing sound for major Hollywood studios.',
   },

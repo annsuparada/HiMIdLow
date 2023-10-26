@@ -39,7 +39,7 @@ const BrandingSection: React.FC = () => {
   return (
     <div style={styles.container}>
       <div style={styles.textContainer}>
-        <h1>We work with some of the best!</h1>
+        <h1>We work with the best!</h1>
       </div>
       <div style={styles.grid}>
         {brandingList.map((item, index) => (

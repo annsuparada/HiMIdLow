@@ -104,7 +104,7 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
             </div>
             <div style={styles.gridItem}>
               <p style={styles.p}>
-                Pro is for mid sized production companies and agencies that have
+                Pro is for mid-sized production companies and agencies that have
                 several active productions.
               </p>
             </div>
@@ -271,7 +271,7 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
             </div>
             <div style={styles.gridItem}>
               <p style={styles.p}>
-                Pro is for mid sized production companies and agencies that have
+                Pro is for mid-sized production companies and agencies that have
                 several active productions.
               </p>
             </div>

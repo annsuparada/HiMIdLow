@@ -72,9 +72,9 @@ const DetailSection: React.FC<DetailSectionProps> = ({ whatWeDoId }) => {
         <p style={{ textAlign: 'center' }}>
           HiMidLow is a sonic branding agency that brings your campaign to life
           by giving you the very best sound Hollywood has to offer! We
-          specialize in high profile mixes, signature sounds and sonic identity.
-          Even better, the way we do business makes the entire process faster,
-          easier, and way less of a headache!
+          specialize in high-profile mixes, signature sounds, and sonic
+          identity. Even better, the way we do business makes the entire process
+          faster, easier, and way less of a headache!
         </p>
       </div>
       <div style={styles.cardContainer}>
@@ -105,7 +105,7 @@ const DetailSection: React.FC<DetailSectionProps> = ({ whatWeDoId }) => {
         <div style={styles.quoteContainer}>
           <p>
             ...meticulous, methodical and able to handle the entire sound
-            pagkage, from design, mix and mastering. The project cam out great!
+            pagkage, from design, mix and mastering. The project came out great!
           </p>
           <p style={{ textAlign: 'center' }}>-Lorne Hiltser COO @HKCorp</p>
         </div>

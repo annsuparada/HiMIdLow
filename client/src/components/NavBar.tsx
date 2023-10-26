@@ -11,6 +11,7 @@ import {
 } from '../theme'
 import MainWrapper from './MainWrapper'
 import logo from '../logo/LargeLogoBlack.svg'
+import NavBarMobile from './NavBarMobile'
 
 interface NavBarProps {
   pathname: string
@@ -159,6 +160,7 @@ const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
             />
           </Tabs>
         </div>
+        <NavBarMobile />
       </div>
     </MainWrapper>
   )
