@@ -25,9 +25,9 @@ export const brandingList = [
   },
   {
     src:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997228/HIMidLow/carls-jr_dclll4.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698354722/carls-jr-5-logo-png-transparent_1_zpvfey.png',
     alt: 'Carls Jr. logo',
-    width: '60px',
+    width: '70px',
   },
   // {
   //   src:
@@ -120,7 +120,7 @@ export const brandingListLastRow = [
     src:
       'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997232/HIMidLow/Squarespace-Logo_l5id84.png',
     alt: 'Squarespace',
-    width: '90px',
+    width: '110px',
   },
 ]
 

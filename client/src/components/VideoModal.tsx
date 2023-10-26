@@ -8,15 +8,10 @@ import { white } from '../theme'
 interface VideoModelProps {
   imgUrl: string
   alt: string
-  // imgHeight: string
   videoUrl: string
 }
 
-const VideoModal: React.FC<VideoModelProps> = ({
-  imgUrl,
-  // imgHeight,
-  videoUrl,
-}) => {
+const VideoModal: React.FC<VideoModelProps> = ({ imgUrl, videoUrl }) => {
   const [open, setOpen] = useState(false)
   const [isHovering, setIsHovering] = useState(false)
   const handleOpen = () => setOpen(true)
@@ -78,16 +73,18 @@ const VideoModal: React.FC<VideoModelProps> = ({
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={styles.modal}>
-          <iframe
-            src={videoUrl}
-            title="Embedded YouTube Video"
-            allowFullScreen
-            width="850"
-            height="485"
-            frameBorder="0"
-          ></iframe>
-        </Box>
+        <div style={{ maxWidth: '100%', overflow: 'hidden' }}>
+          <Box sx={styles.modal}>
+            <iframe
+              src={videoUrl}
+              title="Embedded YouTube Video"
+              allowFullScreen
+              width="100%"
+              height="100%"
+              frameBorder="0"
+            ></iframe>
+          </Box>
+        </div>
       </Modal>
     </div>
   )

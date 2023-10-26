@@ -29,7 +29,7 @@ const BrandingSection: React.FC = () => {
     },
     gridLastRow: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(4, 1fr)',
+      gridTemplateColumns: isMobile ? 'repeat(3, 1fr)' : 'repeat(4, 1fr)',
       gap: '20px',
       maxWidth: '700px',
       margin: '20px auto',
