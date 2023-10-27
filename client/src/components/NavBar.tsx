@@ -60,7 +60,7 @@ const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
     },
     logo: {
       width: '150px',
-      paddingTop: '20px',
+      padding: '10px',
     },
     moblieViewTab: {
       display: isTablet ? 'inline' : 'none',
