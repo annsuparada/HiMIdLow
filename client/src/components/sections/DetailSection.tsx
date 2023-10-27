@@ -1,9 +1,6 @@
 import { Card, useMediaQuery } from '@mui/material'
 import React from 'react'
 import { darkBackground, lightPurple, tabletView } from '../../theme'
-import arrowIcon from '../../logo/arrows-repeat-solid.svg'
-import pointerIcon from '../../logo/bullseye-pointer.svg'
-import volumeUpIcon from '../../logo/volume-up.svg'
 import quote from '../../logo/Quote.svg'
 import MainWrapper from '../MainWrapper'
 import { details } from '../../data'
@@ -26,7 +23,7 @@ const DetailSection: React.FC<DetailSectionProps> = ({ whatWeDoId }) => {
       padding: '0 10px',
     },
     icon: {
-      width: '4rem',
+      width: '5rem',
       margin: '0 auto',
       display: 'flex',
       alignItems: 'center',
@@ -77,12 +74,20 @@ const DetailSection: React.FC<DetailSectionProps> = ({ whatWeDoId }) => {
       </div>
       <div style={styles.cardContainer}>
         <Card sx={styles.card}>
-          <img src={pointerIcon} style={styles.icon} alt="arrow icon" />
+          <img
+            src="https://res.cloudinary.com/dejr86qx8/image/upload/v1698367544/bullseye-pointer_1_jgls7o.png"
+            style={styles.icon}
+            alt="arrow icon"
+          />
           <p>Choose a plan and request as many mixes or edits as you'd like!</p>
         </Card>
 
         <Card sx={styles.card}>
-          <img src={volumeUpIcon} style={styles.icon} alt="arrow icon" />
+          <img
+            src="https://res.cloudinary.com/dejr86qx8/image/upload/v1698367538/Recycle_zjwmim.png"
+            style={styles.icon}
+            alt="arrow icon"
+          />
           <p>
             Get Your mixes fast! Usually within 1 to 3 business day. <br />
             Monday thru Friday.
@@ -90,7 +95,11 @@ const DetailSection: React.FC<DetailSectionProps> = ({ whatWeDoId }) => {
         </Card>
 
         <Card sx={styles.card}>
-          <img src={arrowIcon} style={styles.icon} alt="arrow icon" />
+          <img
+            src="https://res.cloudinary.com/dejr86qx8/image/upload/v1698367538/Recycle_zjwmim.png"
+            style={styles.icon}
+            alt="arrow icon"
+          />
           <p>
             We'll adress any notes quickly until you're 100% satified.
             <br />
