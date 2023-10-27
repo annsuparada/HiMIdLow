@@ -1,6 +1,8 @@
 import { Button, Menu, MenuItem } from '@mui/material'
 import React from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
+import { Link } from 'react-router-dom'
+import { darkFont } from '../theme'
 
 const NavBarMobile: React.FC = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
@@ -10,6 +12,13 @@ const NavBarMobile: React.FC = () => {
   }
   const handleClose = () => {
     setAnchorEl(null)
+  }
+
+  const styles = {
+    link: {
+      color: darkFont,
+      textDecoration: 'none',
+    },
   }
 
   return (
@@ -32,9 +41,30 @@ const NavBarMobile: React.FC = () => {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem>
+          <Link to="/work" style={styles.link}>
+            Work
+          </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/what-we-do" style={styles.link}>
+            What We Do
+          </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/pricing" style={styles.link}>
+            Pricing
+          </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link
+            to="https://calendly.com/himidlow"
+            target="_blank"
+            style={styles.link}
+          >
+            Let's Talk
+          </Link>
+        </MenuItem>
       </Menu>
     </div>
   )

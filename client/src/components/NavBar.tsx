@@ -28,13 +28,12 @@ const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
   const styles = {
     navContainer: {
       display: 'grid',
-      gridTemplateColumns: isTablet ? '1fr' : 'repeat(2, 1fr)',
-      justifycontent: isTablet ? 'center' : 'space-between',
+      gridTemplateColumns: 'repeat(2, 1fr)',
       padding: '18px 5px 0',
     },
     tabContainer: {
       display: 'flex',
-      justifyContent: isTablet ? 'center' : 'flex-end',
+      justifyContent: 'flex-end',
     },
     tab: {
       color: darkFont,
@@ -43,11 +42,7 @@ const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
       },
     },
     desktopTab: {
-      color: darkFont,
-      '&.Mui-selected': {
-        fontWeight: 'bold',
-      },
-      display: isTablet ? 'none' : 'in-line',
+      display: isTablet ? 'none' : 'inline',
     },
     link: {
       color: darkFont,
@@ -67,100 +62,70 @@ const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
       width: '150px',
       paddingTop: '20px',
     },
-    logoContainer: {
-      display: 'flex',
-      justifyContent: isTablet ? 'center' : 'left',
-    },
-    moblieMenu: {
-      display: 'none',
-    },
     moblieViewTab: {
-      maxWidth: '100%',
-      display: isTablet ? 'flex' : 'none',
-      justifyContent: 'center',
+      display: isTablet ? 'inline' : 'none',
     },
   }
   return (
     <MainWrapper backgroundColor={background}>
       <div style={styles.navContainer} className="nav-container">
-        <div style={styles.logoContainer}>
-          <Link to="/">
-            <img src={logo} alt="Low Mid Hight Logo" style={styles.logo} />
-          </Link>
-        </div>
+        <Link to="/">
+          <img src={logo} alt="Low Mid Hight Logo" style={styles.logo} />
+        </Link>
         <div style={styles.tabContainer}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            textColor="secondary"
-            indicatorColor="secondary"
-          >
-            <Tab
-              value="work"
-              label={
-                <Link to="/work" style={styles.link}>
-                  Work
-                </Link>
-              }
-              sx={styles.tab}
-            />
-            <Tab
-              value="what-we-do"
-              label={
-                <Link to="/what-we-do" style={styles.link}>
-                  What we do
-                </Link>
-              }
-              sx={styles.tab}
-            />
-            <Tab
-              value="pricing"
-              label={
-                <Link to="/pricing" style={styles.link}>
-                  Pricing
-                </Link>
-              }
-              sx={styles.tab}
-            />
-            <Tab
-              value="contact"
-              label={
-                <Link
-                  to="https://calendly.com/himidlow"
-                  target="_blank"
-                  style={styles.linkBotton}
-                >
-                  Let's talk
-                </Link>
-              }
-              sx={styles.desktopTab}
-            />
-          </Tabs>
+          <div style={styles.desktopTab}>
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              textColor="secondary"
+              indicatorColor="secondary"
+            >
+              <Tab
+                value="work"
+                label={
+                  <Link to="/work" style={styles.link}>
+                    Work
+                  </Link>
+                }
+                sx={styles.tab}
+              />
+              <Tab
+                value="what-we-do"
+                label={
+                  <Link to="/what-we-do" style={styles.link}>
+                    What we do
+                  </Link>
+                }
+                sx={styles.tab}
+              />
+              <Tab
+                value="pricing"
+                label={
+                  <Link to="/pricing" style={styles.link}>
+                    Pricing
+                  </Link>
+                }
+                sx={styles.tab}
+              />
+              <Tab
+                value="contact"
+                label={
+                  <Link
+                    to="https://calendly.com/himidlow"
+                    target="_blank"
+                    style={styles.linkBotton}
+                  >
+                    Let's talk
+                  </Link>
+                }
+                sx={styles.tab}
+              />
+            </Tabs>
+          </div>
+          <div style={styles.moblieViewTab}>
+            <NavBarMobile />
+          </div>
         </div>
-        {/* tablet/moblie */}
-        <div style={styles.moblieViewTab}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            textColor="secondary"
-            indicatorColor="secondary"
-          >
-            <Tab
-              value="contact"
-              label={
-                <Link
-                  to="https://calendly.com/himidlow"
-                  target="_blank"
-                  style={styles.linkBotton}
-                >
-                  Let's talk
-                </Link>
-              }
-              sx={styles.tab}
-            />
-          </Tabs>
-        </div>
-        {/* <NavBarMobile /> */}
       </div>
     </MainWrapper>
   )
