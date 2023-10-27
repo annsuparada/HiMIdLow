@@ -32,6 +32,7 @@ const Benefits: React.FC<BenefitsProps> = ({
         : 'repeat(3, 1fr)',
     },
   }
+
   return (
     <div style={{ marginTop: '4rem', marginBottom: '4rem' }}>
       <ScrollToTop />

@@ -117,12 +117,10 @@ const DetailSection: React.FC<DetailSectionProps> = ({ whatWeDoId }) => {
           <p style={{ textAlign: 'center' }}>-Lorne Hiltser COO @HKCorp</p>
         </div>
       </div>
+
       <div style={styles.darkBackgroundContainer}>
         <MainWrapper backgroundColor={darkBackground}>
-          <h1 style={styles.h1}>
-            Sound so good, you'll <br />
-            never go back!
-          </h1>
+          <h1 style={styles.h1}>Sound so good, you'll never go back!</h1>
           <div
             style={{ maxWidth: '600px', margin: '0 auto', padding: '0 10px' }}
           >
