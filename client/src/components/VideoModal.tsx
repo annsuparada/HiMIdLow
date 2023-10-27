@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Box from '@mui/material/Box'
 import Modal from '@mui/material/Modal'
-import { Card, CardActionArea, CardMedia } from '@mui/material'
+import { Card, CardActionArea, CardMedia, useMediaQuery } from '@mui/material'
 import YouTubeIcon from '@mui/icons-material/YouTube'
-import { white } from '../theme'
+import { mobileView, tabletView, white } from '../theme'
 
 interface VideoModelProps {
   imgUrl: string
@@ -14,6 +14,9 @@ interface VideoModelProps {
 const VideoModal: React.FC<VideoModelProps> = ({ imgUrl, videoUrl }) => {
   const [open, setOpen] = useState(false)
   const [isHovering, setIsHovering] = useState(false)
+  const isTablet = useMediaQuery(`(max-width:${tabletView})`)
+  const isMobile = useMediaQuery(`(max-width:${mobileView})`)
+
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
   const handleMouseEnter = () => setIsHovering(true)
@@ -47,6 +50,9 @@ const VideoModal: React.FC<VideoModelProps> = ({ imgUrl, videoUrl }) => {
     },
   }
 
+  const videoWidth = isMobile ? '350px' : isTablet ? '600px' : '800px'
+  const videoHeight = isMobile ? '200px' : isTablet ? '340px' : '450px'
+
   return (
     <div>
       <div
@@ -73,18 +79,16 @@ const VideoModal: React.FC<VideoModelProps> = ({ imgUrl, videoUrl }) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <div style={{ maxWidth: '100%', overflow: 'hidden' }}>
-          <Box sx={styles.modal}>
-            <iframe
-              src={videoUrl}
-              title="Embedded YouTube Video"
-              allowFullScreen
-              width="100%"
-              height="100%"
-              frameBorder="0"
-            ></iframe>
-          </Box>
-        </div>
+        <Box sx={styles.modal}>
+          <iframe
+            src={videoUrl}
+            title="Embedded YouTube Video"
+            allowFullScreen
+            width={videoWidth}
+            height={videoHeight}
+            frameBorder="0"
+          ></iframe>
+        </Box>
       </Modal>
     </div>
   )

@@ -49,7 +49,6 @@ const WorkSection: React.FC = () => {
           />
         ))}
       </div>
-
       <Button
         href="/work"
         variant="contained"
