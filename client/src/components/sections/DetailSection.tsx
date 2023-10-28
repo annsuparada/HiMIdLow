@@ -1,24 +1,30 @@
 import { Card, useMediaQuery } from '@mui/material'
 import React from 'react'
-import { darkBackground, lightPurple, tabletView } from '../../theme'
+import {
+  darkBackground,
+  lightPurple,
+  mobileView,
+  tabletView,
+} from '../../theme'
 import quote from '../../logo/Quote.svg'
 import MainWrapper from '../MainWrapper'
-import { details } from '../../data'
+import { details, scopeList } from '../../data'
 
 interface DetailSectionProps {
   whatWeDoId: string
 }
 const DetailSection: React.FC<DetailSectionProps> = ({ whatWeDoId }) => {
   const isTablet = useMediaQuery(`(max-width:${tabletView})`)
+  const isMobile = useMediaQuery(`(max-width:${mobileView})`)
 
   const styles = {
     container: {},
     h1: { textAlign: 'center' as 'center', fontSize: '44px' },
     cardContainer: {
-      maxWidth: '1300px',
+      maxWidth: isTablet ? '360px' : '1300px',
       margin: '4rem auto 8rem',
       display: 'grid',
-      gap: '2.5rem',
+      gap: '1rem',
       gridTemplateColumns: isTablet ? '1fr' : 'repeat(3, 1fr)',
       padding: '0 10px',
     },
@@ -57,7 +63,15 @@ const DetailSection: React.FC<DetailSectionProps> = ({ whatWeDoId }) => {
       paddingTop: '2rem',
       paddingBottom: '1rem',
     },
-    mixingList: {},
+    scopeCard: {
+      width: '300px',
+      backgroundColor: lightPurple,
+      padding: '25px',
+      borderRadius: '10px',
+      boxShadow: '0 6px 45px 0px #261AAB33',
+      margin: '0 auto',
+    },
+    mixingList: { margin: '5px 0' },
   }
 
   return (
@@ -167,33 +181,27 @@ const DetailSection: React.FC<DetailSectionProps> = ({ whatWeDoId }) => {
           <h1 style={styles.h1}>More than just mixes!</h1>
           <p style={{ textAlign: 'center' }}>Whatever you need, we got you!</p>
           <div style={styles.cardContainer}>
-            <div style={styles.mixingList}>
-              <ul>
-                <li>Mixing</li>
-                <li>Editorial</li>
-                <li>Audio Repair</li>
-                <li>Sound Design</li>
-                <li>Signature Sounds</li>
-              </ul>
-            </div>
-            <div style={styles.mixingList}>
-              <ul>
-                <li>Music mixing</li>
-                <li>Podcast production</li>
-                <li>Audio Consulting</li>
-                <li>Composer referrals</li>
-                <li>Foley</li>
-              </ul>
-            </div>
-            <div style={styles.mixingList}>
-              <ul>
-                <li>ATMOS</li>
-                <li>Binaural audio</li>
-                <li>Game sound design</li>
-                <li>Sonic Identity and Branding</li>
-                <li>Scripted TV and Feature mixes</li>
-              </ul>
-            </div>
+            {/* <Card style={styles.scopeCard}> */}
+            {scopeList.map((i, index) => (
+              <>
+                {i.col === 1 ? <p style={styles.mixingList}>{i.item}</p> : null}
+              </>
+            ))}
+            {/* </Card> */}
+            {/* <Card style={styles.scopeCard}> */}
+            {scopeList.map((i, index) => (
+              <>
+                {i.col === 2 ? <p style={styles.mixingList}>{i.item}</p> : null}
+              </>
+            ))}
+            {/* </Card> */}
+            {/* <Card style={styles.scopeCard}> */}
+            {scopeList.map((i, index) => (
+              <>
+                {i.col === 3 ? <p style={styles.mixingList}>{i.item}</p> : null}
+              </>
+            ))}
+            {/* </Card> */}
           </div>
         </MainWrapper>
       </div>

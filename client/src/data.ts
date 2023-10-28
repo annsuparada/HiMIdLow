@@ -284,3 +284,21 @@ export const videoListWorkPage = [
     videoUrl: 'https://www.youtube.com/embed/VQ7hFBNWsyk?si=mw1gKe3ja-AVsYqR',
   },
 ]
+
+export const scopeList = [
+  { col: 1, item: 'Mixing' },
+  { col: 1, item: 'Editorial' },
+  { col: 1, item: 'Audio Repair' },
+  { col: 1, item: 'Sound Design' },
+  { col: 1, item: 'Signature Sounds' },
+  { col: 2, item: 'Music Mixing' },
+  { col: 2, item: 'Podcast Production' },
+  { col: 2, item: 'Audio Consulting' },
+  { col: 2, item: 'Composer Referrals' },
+  { col: 2, item: 'Foley' },
+  { col: 3, item: 'ATMOS' },
+  { col: 3, item: 'Binaural Audio' },
+  { col: 3, item: 'Game Sound Design' },
+  { col: 3, item: 'Sonic Identity and Branding' },
+  { col: 3, item: 'Scripted TV and Feature Mixes' },
+]
