@@ -65,7 +65,7 @@ const DetailSection: React.FC<DetailSectionProps> = ({ whatWeDoId }) => {
       boxShadow: '0 6px 45px 0px #261AAB33',
       margin: '0 auto',
     },
-    mixingList: { margin: '5px 0' },
+    mixingList: { margin: isTablet ? '5px auto' : '5px 15px' },
   }
 
   return (
@@ -175,27 +175,21 @@ const DetailSection: React.FC<DetailSectionProps> = ({ whatWeDoId }) => {
           <h1 style={styles.h1}>More than just mixes!</h1>
           <p style={{ textAlign: 'center' }}>Whatever you need, we got you!</p>
           <div style={styles.cardContainer}>
-            {/* <Card style={styles.scopeCard}> */}
             {scopeList.map((i, index) => (
               <>
                 {i.col === 1 ? <p style={styles.mixingList}>{i.item}</p> : null}
               </>
             ))}
-            {/* </Card> */}
-            {/* <Card style={styles.scopeCard}> */}
             {scopeList.map((i, index) => (
               <>
                 {i.col === 2 ? <p style={styles.mixingList}>{i.item}</p> : null}
               </>
             ))}
-            {/* </Card> */}
-            {/* <Card style={styles.scopeCard}> */}
             {scopeList.map((i, index) => (
               <>
                 {i.col === 3 ? <p style={styles.mixingList}>{i.item}</p> : null}
               </>
             ))}
-            {/* </Card> */}
           </div>
         </MainWrapper>
       </div>

@@ -48,7 +48,7 @@ const Benefits: React.FC<BenefitsProps> = ({
       <div>
         <h1 style={styles.h1}>Membership perks!</h1>
         <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-          <p style={{ textAlign: 'center' }}>
+          <p style={{ textAlign: 'center', margin: '0 10px' }}>
             Working with us is so seamless and easy, you’ll never need to go
             anywhere else.
           </p>
