@@ -184,6 +184,21 @@ export const details = [
   },
 ]
 
+export const videoImgListMobile = [
+  {
+    imgUrl:
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200869/Untitled_design_3_pdl2tj.png',
+    alt: 'MODOK',
+    videoUrl: 'https://www.youtube.com/embed/oSEWdhHBlYU?si=tEpHwrBs8A1rln6L',
+  },
+  {
+    imgUrl:
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698199367/3_dzicgr.png',
+    alt: 'WOKE',
+    videoUrl: 'https://www.youtube.com/embed/b5kODvhSRAE?si=VfoxVxXU7N_eCuSI',
+  },
+]
+
 export const videoImgListHomePage = [
   {
     imgUrl:

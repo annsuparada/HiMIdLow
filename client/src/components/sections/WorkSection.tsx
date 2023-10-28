@@ -1,7 +1,7 @@
 import React from 'react'
 import VideoModal from '../VideoModal'
 import { Button, useMediaQuery } from '@mui/material'
-import { videoImgListHomePage } from '../../data'
+import { videoImgListHomePage, videoImgListMobile } from '../../data'
 import { mobileView, tabletView } from '../../theme'
 
 const WorkSection: React.FC = () => {
@@ -33,6 +33,7 @@ const WorkSection: React.FC = () => {
     },
   }
 
+  const videos = isMobile ? videoImgListMobile : videoImgListHomePage
   return (
     <div style={styles.container}>
       <div style={styles.textContainer}>
@@ -40,7 +41,7 @@ const WorkSection: React.FC = () => {
       </div>
 
       <div style={styles.imgContainer}>
-        {videoImgListHomePage.map((item, index) => (
+        {videos.map((item, index) => (
           <VideoModal
             key={index}
             imgUrl={item.imgUrl}
