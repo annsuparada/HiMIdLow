@@ -85,19 +85,20 @@ export const brandingList = [
   // },
   {
     src:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997231/HIMidLow/Sony-pictures_obbv5l.png',
-    alt: 'Sony logo',
-    width: '60px',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997232/HIMidLow/Squarespace-Logo_l5id84.png',
+    alt: 'Square space logo',
+    width: '100px',
   },
 ]
 
 export const brandingListLastRow = [
   {
     src:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997228/HIMidLow/abc_c5age1.png',
-    alt: 'ABC logo',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997231/HIMidLow/Sony-pictures_obbv5l.png',
+    alt: 'sony',
     width: '60px',
   },
+
   {
     src:
       'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997229/HIMidLow/Hulu_dd2gdc.png',
@@ -118,9 +119,9 @@ export const brandingListLastRow = [
   },
   {
     src:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997232/HIMidLow/Squarespace-Logo_l5id84.png',
-    alt: 'Squarespace',
-    width: '110px',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1697997228/HIMidLow/abc_c5age1.png',
+    alt: 'ABC logo',
+    width: '60px',
   },
 ]
 
