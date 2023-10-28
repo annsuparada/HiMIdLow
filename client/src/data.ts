@@ -154,10 +154,10 @@ export const membershipPerks = [
     description:
       'All good relationships need to take a breather every now and again. That’s why you can cancel or pause your subscription at any time.',
   },
-  {
-    title: '',
-    description: '',
-  },
+  // {
+  //   title: '',
+  //   description: '',
+  // },
   {
     title: 'You’re one of a small cohort',
     description:

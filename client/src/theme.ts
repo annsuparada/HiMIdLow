@@ -12,6 +12,7 @@ export const darkBotton = '#261aab'
 export const lightPurple = '#F0E5F6'
 export const darkPurple = '#1A126F26'
 export const white = '#ffffff'
+export const offWhite = '#e8e8e8'
 export const logoColor = '#21232A'
 export const pink = '#FEE1FF'
 
