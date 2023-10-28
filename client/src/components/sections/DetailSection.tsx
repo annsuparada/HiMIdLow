@@ -1,11 +1,6 @@
 import { Card, useMediaQuery } from '@mui/material'
 import React from 'react'
-import {
-  darkBackground,
-  lightPurple,
-  mobileView,
-  tabletView,
-} from '../../theme'
+import { darkBackground, lightPurple, tabletView } from '../../theme'
 import quote from '../../logo/Quote.svg'
 import MainWrapper from '../MainWrapper'
 import { details, scopeList } from '../../data'
@@ -15,7 +10,6 @@ interface DetailSectionProps {
 }
 const DetailSection: React.FC<DetailSectionProps> = ({ whatWeDoId }) => {
   const isTablet = useMediaQuery(`(max-width:${tabletView})`)
-  const isMobile = useMediaQuery(`(max-width:${mobileView})`)
 
   const styles = {
     container: {},

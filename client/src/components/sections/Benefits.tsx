@@ -1,14 +1,7 @@
 import { Button, Card, useMediaQuery } from '@mui/material'
 import React from 'react'
 import { membershipPerks } from '../../data'
-import {
-  darkBackground,
-  lightPurple,
-  mobileView,
-  offWhite,
-  tabletView,
-  white,
-} from '../../theme'
+import { mobileView, offWhite, tabletView } from '../../theme'
 import ScrollToTop from '../ScrollToTop'
 
 interface BenefitsProps {
