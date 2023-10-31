@@ -52,7 +52,20 @@ const Footer: React.FC = () => {
               <Link to="/" style={styles.icon}>
                 HOME
               </Link>
-              <Link to="/terms-and-conditions">T.O.S.</Link>
+              <Link to="/work" style={styles.icon}>
+                WORK
+              </Link>
+              <Link to="/what-we-do" style={styles.icon}>
+                WHAT WE DO
+              </Link>
+            </div>
+            <div>
+              <Link to="/pricing" style={styles.icon}>
+                PRICING
+              </Link>
+              <Link to="/terms-and-conditions" style={styles.icon}>
+                T.O.S.
+              </Link>
             </div>
           </div>
           <div style={styles.gridItem}>
