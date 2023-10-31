@@ -11,7 +11,7 @@ interface VideoModelProps {
   videoUrl: string
 }
 
-const VideoModal: React.FC<VideoModelProps> = ({ imgUrl, videoUrl }) => {
+const VideoModal: React.FC<VideoModelProps> = ({ imgUrl, videoUrl, alt }) => {
   const [open, setOpen] = useState(false)
   const [isHovering, setIsHovering] = useState(false)
   const isTablet = useMediaQuery(`(max-width:${tabletView})`)
@@ -66,7 +66,7 @@ const VideoModal: React.FC<VideoModelProps> = ({ imgUrl, videoUrl }) => {
               component="img"
               width="100%"
               image={imgUrl}
-              alt="green iguana"
+              alt={alt}
               sx={styles.cardMedia}
             />
             <YouTubeIcon sx={styles.icon} />
