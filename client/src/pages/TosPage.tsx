@@ -13,6 +13,10 @@ const TosPage: React.FC = () => {
       margin: '25px auto',
       padding: '0 15px 25px',
     },
+    h2: {
+      textAlign: 'left' as 'left',
+      paddingTop: '15px',
+    },
   }
 
   return (
@@ -47,7 +51,7 @@ const TosPage: React.FC = () => {
             an ongoing obligation owed by Client to HiMidLow.
           </p>
 
-          <h2>1. Intellectual Property Rights</h2>
+          <h2 style={styles.h2}>1. Intellectual Property Rights</h2>
           <p>
             Unless otherwise indicated, the Website is the property of HiMidLow
             and all source code, databases, functionality, software, website
@@ -68,7 +72,7 @@ const TosPage: React.FC = () => {
             Content and Marks.
           </p>
 
-          <h2>2. Ownership of Materials</h2>
+          <h2 style={styles.h2}>2. Ownership of Materials</h2>
           <p>
             Notwithstanding HiMidLow’s ownership of Submissions, as described in
             Paragraph 4 (“Client Feedback”), all design and original source
@@ -88,7 +92,7 @@ const TosPage: React.FC = () => {
             document.
           </p>
 
-          <h2>3. Third-Party Sound FX and/or Music</h2>
+          <h2 style={styles.h2}>3. Third-Party Sound FX and/or Music</h2>
           <p>
             In the event that any Project incorporates sound fx and/or music
             that are not owned by HiMidLow and require a commercial license in
@@ -99,7 +103,7 @@ const TosPage: React.FC = () => {
             and/or music incorporated into a Project.
           </p>
 
-          <h2>4. User Representations</h2>
+          <h2 style={styles.h2}>4. User Representations</h2>
           <p>
             By using the Website, Client represents and warrants that:Client has
             the legal capacity and agrees to comply with these Terms of
@@ -110,7 +114,7 @@ const TosPage: React.FC = () => {
             any applicable law or regulation.
           </p>
 
-          <h2>5. Prohibited Activities</h2>
+          <h2 style={styles.h2}>5. Prohibited Activities</h2>
           <p>
             Client shall not access or use the Website for any purpose other
             than that for which the Website is made available to the Client. The
@@ -143,7 +147,7 @@ const TosPage: React.FC = () => {
             or regulations.
           </p>
 
-          <h2>6. Client Feedback</h2>
+          <h2 style={styles.h2}>6. Client Feedback</h2>
           <p>
             Client acknowledges and agrees that any questions, comments,
             suggestions or other feedback or submission (each a “Submission”)
@@ -176,7 +180,7 @@ const TosPage: React.FC = () => {
             property.
           </p>
 
-          <h2>8. Privacy Policy</h2>
+          <h2 style={styles.h2}>8. Privacy Policy</h2>
           <p>
             By using the Website, Client agrees to be bound and abide by the
             Privacy Policy and the terms more particularly set forth therein and
@@ -196,7 +200,7 @@ const TosPage: React.FC = () => {
             delete that information as soon as reasonably practical.
           </p>
 
-          <h2>9. Returns and Refunds</h2>
+          <h2 style={styles.h2}>9. Returns and Refunds</h2>
           <p>
             HiMidLow reserves the right to deny refunds based on its own self
             discretion and without notice or liability to Client. Refund
@@ -209,7 +213,7 @@ const TosPage: React.FC = () => {
             legal actions against Client for breach of this paragraph.
           </p>
 
-          <h2>10. Modification</h2>
+          <h2 style={styles.h2}>10. Modification</h2>
           <p>
             HiMidLow reserves the right to change, alter, modify, amend or
             remove anything or any content on the Website for any reason at its
@@ -218,7 +222,7 @@ const TosPage: React.FC = () => {
             liability to Client.
           </p>
 
-          <h2>11. Connection Interruptions</h2>
+          <h2 style={styles.h2}>11. Connection Interruptions</h2>
           <p>
             HiMidLow does not guarantee or warrant the Website will be available
             and accessible at all times. Issues with hardware, software or other
@@ -229,14 +233,14 @@ const TosPage: React.FC = () => {
             connection or service.
           </p>
 
-          <h2>12. Governing Law</h2>
+          <h2 style={styles.h2}>12. Governing Law</h2>
           <p>
             These Terms of Use shall be governed by and construed in accordance
             with the laws of the State of California without regard to conflict
             of law principles.
           </p>
 
-          <h2>13. Litigation</h2>
+          <h2 style={styles.h2}>13. Litigation</h2>
           <p>
             Any legal action of whatever nature shall be brought in the state
             courts of Washington County, California or in the United States
@@ -249,7 +253,7 @@ const TosPage: React.FC = () => {
             from these Terms of Use.
           </p>
 
-          <h2>14. Disclaimer</h2>
+          <h2 style={styles.h2}>14. Disclaimer</h2>
           <p>
             The Website is provided on an as-is, as-available basis. Client
             agrees that its use of the Website and Services are at Client’s sole
@@ -278,7 +282,9 @@ const TosPage: React.FC = () => {
             website or mobile application featured in any advertising.
           </p>
 
-          <h2>15. Limitations of Liability and Indemnification</h2>
+          <h2 style={styles.h2}>
+            15. Limitations of Liability and Indemnification
+          </h2>
           <p>
             HiMidLow and its directors, employees, members, independent
             contractors or agents shall not be liable to Client or any third
@@ -301,7 +307,7 @@ const TosPage: React.FC = () => {
             with the defense of such claims.
           </p>
 
-          <h2>16. User Data</h2>
+          <h2 style={styles.h2}>16. User Data</h2>
           <p>
             Client is solely responsible for all data transmitted to or that
             relates to any activity Client has undertaken using the Website.
@@ -310,7 +316,9 @@ const TosPage: React.FC = () => {
             action against HiMidLow from any such loss or corruption.
           </p>
 
-          <h2>17. Electronic communications, transactions and signatures</h2>
+          <h2 style={styles.h2}>
+            17. Electronic communications, transactions and signatures
+          </h2>
           <p>
             Client hereby consents to receive electronic communications from
             HiMidLow and Client agrees that all agreements, notices, disclosures
@@ -326,7 +334,7 @@ const TosPage: React.FC = () => {
             the granting of credits by any means other than electronic.
           </p>
 
-          <h2>18. Showcasing Design Work</h2>
+          <h2 style={styles.h2}>18. Showcasing Design Work</h2>
           <p>
             HiMidLow reserves the right to share design work on digital channels
             including social media, website, etc. unless otherwise agreed upon.
@@ -335,7 +343,7 @@ const TosPage: React.FC = () => {
             discuss Client's work publicly.
           </p>
 
-          <h2>19. Referrals</h2>
+          <h2 style={styles.h2}>19. Referrals</h2>
           <p>
             When applicable, referral tracking and payouts are handled through
             our third-party partner,{' '}
@@ -348,7 +356,7 @@ const TosPage: React.FC = () => {
             </Link>{' '}
           </p>
 
-          <h2>20. Miscellaneous</h2>
+          <h2 style={styles.h2}>20. Miscellaneous</h2>
           <p>
             These Terms of Use and any policies posted on the Website or
             regarding the Website constitute the entire agreement and
@@ -364,7 +372,7 @@ const TosPage: React.FC = () => {
             or agency relationship between Client and HiMidLow.
           </p>
 
-          <h2>21. Contact Information</h2>
+          <h2 style={styles.h2}>21. Contact Information</h2>
           <p>
             For any questions or complaints regarding the Website, please
             contact HiMidLow at: andy@himidlow.com.
