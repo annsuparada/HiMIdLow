@@ -1,6 +1,13 @@
 import { Button, useMediaQuery } from '@mui/material'
 import React from 'react'
-import { darkBackground, mobileView } from '../../theme'
+import { pricing } from '../../data'
+import {
+  darkBackground,
+  darkFont,
+  mobileView,
+  offWhite,
+  white,
+} from '../../theme'
 import MainWrapper from '../MainWrapper'
 import PageContainer from '../PageContainer'
 
@@ -17,44 +24,38 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
       fontSize: '44px',
       textAlign: 'center' as 'center',
     },
-    tableGridDesktop: {
-      maxWidth: '1083px',
-      margin: '0 auto',
-      display: isMobile ? 'none' : 'grid',
-      gridTemplateColumns: 'repeat(3, 1fr)',
-      borderTop: '2px solid #BCC0DA',
-      borderLeft: '2px solid #BCC0DA',
-      borderBottom: '2px solid #BCC0DA',
+    pricingGrid: {
+      display: 'grid',
+      gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
+      gap: '30px',
     },
-    tableGridMobile: {
-      maxWidth: '1083px',
-      margin: '0 auto',
-      display: isMobile ? 'grid' : 'none',
+    pringGridItem: {
+      display: 'grid',
       gridTemplateColumns: '1fr',
-      borderTop: '2px solid #BCC0DA',
-      borderLeft: '2px solid #BCC0DA',
-      borderBottom: '2px solid #BCC0DA',
+      border: '2px solid #BCC0DA',
+      backgroundColor: '#FAF6FA',
+      padding: '20px',
+      borderRadius: '10px',
+    },
+    midGridItem: {
+      display: 'grid',
+      gridTemplateColumns: '1fr',
+      backgroundColor: darkFont,
+      padding: '20px',
+      borderRadius: '10px',
+      position: 'relative' as 'relative',
     },
     gridItem: {
       backgroundColor: '#FAF6FA',
       padding: '15px',
       borderRight: '2px solid #BCC0DA',
     },
-    gridItemMobile: {
-      backgroundColor: '#FAF6FA',
-      padding: '15px',
-      borderRight: '2px solid #BCC0DA',
-      borderBottom: '2px solid #BCC0DA',
-    },
-    lastItem: {
-      backgroundColor: '#FAF6FA',
-      gridColumn: 'span 3',
-      borderRight: '2px solid #BCC0DA',
-      borderTop: '2px solid #BCC0DA',
-      padding: '15px',
-    },
     p: {
       margin: '0px',
+    },
+    midP: {
+      margin: '0px',
+      color: offWhite,
     },
     priceBox: {
       marginTop: '60px',
@@ -70,191 +71,63 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
       display: 'block',
       margin: '15px auto',
       width: '138px',
+      height: '43px',
     },
-    noMargin: {
-      margin: '0px',
+    whiteButton: {
+      display: 'block',
+      margin: '15px auto',
+      width: '138px',
+      height: '43px',
+      color: darkFont,
+      backgroundColor: offWhite,
+    },
+
+    ul: {
+      paddingTop: '30px',
+    },
+    bestValue: {
+      height: '30px',
+      backgroundColor: 'red',
+      borderTopLeftRadius: '8px',
+      borderTopRightRadius: '8px',
+      width: '100%',
+      position: 'absolute' as 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      zIndex: 1,
+    },
+    bestValueText: {
+      textAlign: 'center' as 'center',
+      margin: '2px',
+      color: offWhite,
+      fontWeight: 'bold',
     },
   }
 
   return (
     <div id={membershipId}>
       <PageContainer backgroundColor={darkBackground} padding="3rem 0 8rem">
-        <MainWrapper backgroundColor={darkBackground} padding="0 15px">
+        <MainWrapper backgroundColor={darkBackground} padding="0 30px">
           <h1 style={styles.h1}>Membership Levels</h1>
-          <p style={{ textAlign: 'center' }}>Choose your subscription plan!</p>
-          <div style={styles.tableGridDesktop}>
-            {/* titles */}
-            <div style={styles.gridItem}>
-              <h1>Standard</h1>
-            </div>
-            <div style={styles.gridItem}>
-              <h1>Pro</h1>
-            </div>
-            <div style={styles.gridItem}>
-              <h1>Need more?</h1>
-            </div>
-
-            {/* description */}
-            <div style={styles.gridItem}>
-              <p style={styles.p}>
-                Standard is for small production companies and agencies that
-                need small quantities of short form content edited and mixed
-                monthly.
-              </p>
-            </div>
-            <div style={styles.gridItem}>
-              <p style={styles.p}>
-                Pro is for mid-sized production companies and agencies that have
-                several active productions.
-              </p>
-            </div>
-            <div style={styles.gridItem}>
-              <p style={styles.p}>
-                If you’re a larger scale production company and need one of the
-                following, let’s talk!
-              </p>
-            </div>
-
-            {/* What you get! */}
-            <div style={styles.gridItem}>
-              <h2 style={styles.noMargin}>What you get!</h2>
-            </div>
-            <div style={styles.gridItem}>
-              <h2 style={styles.noMargin}>What you get!</h2>
-            </div>
-            <div style={styles.gridItem}></div>
-
-            {/* list */}
-            <div style={styles.gridItem}>
-              <ul>
-                <li>Unlimited mixes and editorial.</li>
-                <li>Unlimited revisions.</li>
-                <li>Lightning fast turnaround. (usually 1-3 days)</li>
-                <li>Unlimited projects in the backlog.</li>
-                <li>Mixes in surround and stereo.</li>
-                <li>Only 1 active project at a time.</li>
+          <p style={{ textAlign: 'center', paddingBottom: '20px' }}>
+            Choose your subscription plan!
+          </p>
+          <div style={styles.pricingGrid}>
+            {/* Standard */}
+            <div style={styles.pringGridItem}>
+              <h1>{pricing[0].type}</h1>
+              <p style={styles.p}>{pricing[0].description}</p>
+              <ul style={styles.ul}>
+                {pricing[0].options.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
-            </div>
-            <div style={styles.gridItem}>
-              <ul>
-                <li>Unlimited mixes and editorial.</li>
-                <li>Unlimited revisions.</li>
-                <li>Lightning fast turnaround. (usually 1-3 days)</li>
-                <li>Unlimited projects in the backlog.</li>
-                <li>Mixes in surround and stereo.</li>
-                <li>Up to 3 active project at a time.</li>
-              </ul>
-            </div>
-            <div style={styles.gridItem}>
-              <ul>
-                <li>More than 4 active projects at a time.</li>
-                <li>Campaign level sound design. Immediate turn around.</li>
-                <li>Signature Sounds or Sonic logos.</li>
-                <li>VO or Composer support.</li>
-                <li> Mixes in Dolby ATMOS.</li>
-                <li>You might even need less of us. No worries, let’s talk.</li>
-              </ul>
-            </div>
-
-            {/* price */}
-            <div style={styles.gridItem}>
               <div style={styles.priceBox}>
                 <p style={styles.price}>
-                  <span style={styles.span}>$5,000</span>/month
+                  <span style={styles.span}>{pricing[0].price}</span>/month
                 </p>
               </div>
-            </div>
-            <div style={styles.gridItem}>
-              <div style={styles.priceBox}>
-                <p style={styles.price}>
-                  <span style={styles.span}>$7,500</span>/month
-                </p>
-              </div>
-            </div>
-            <div style={styles.gridItem}>
-              <div style={styles.priceBox}>
-                <p style={styles.price}></p>
-              </div>
-            </div>
-
-            {/* buttons */}
-            <div style={styles.gridItem}>
-              <Button
-                variant="contained"
-                sx={styles.button}
-                href="https://calendly.com/himidlow"
-                target="_blank"
-              >
-                Book a call
-              </Button>
-            </div>
-            <div style={styles.gridItem}>
-              <Button
-                variant="contained"
-                sx={styles.button}
-                href="https://calendly.com/himidlow"
-                target="_blank"
-              >
-                Book a call
-              </Button>
-            </div>
-            <div style={styles.gridItem}>
-              <Button
-                variant="outlined"
-                sx={styles.button}
-                href="https://calendly.com/himidlow"
-                target="_blank"
-              >
-                Book a call
-              </Button>
-            </div>
-
-            {/* <div style={styles.lastItem}>
-              <h1 style={styles.h1}>Refer a friend!</h1>
-              <p style={{ textAlign: 'center' }}>
-                Get a 5% monthly referral fee per production <br />
-                that signs up because of your referral! <br />
-                <span style={{ color: '#787B83' }}>
-                  *terms and conditions may apply.
-                </span>
-              </p>
-            </div> */}
-          </div>
-
-          <div style={styles.tableGridMobile}>
-            {/* standard */}
-            <div style={styles.gridItem}>
-              <h1>Standard</h1>
-            </div>
-            <div style={styles.gridItem}>
-              <p style={styles.p}>
-                Standard is for small production companies and agencies that
-                need small quantities of short form content edited and mixed
-                monthly.
-              </p>
-            </div>
-            <div style={styles.gridItem}>
-              <h2 style={styles.noMargin}>What you get!</h2>
-            </div>
-            <div style={styles.gridItem}>
-              <ul>
-                <li>Unlimited mixes and editorial.</li>
-                <li>Unlimited revisions.</li>
-                <li>Lightning fast turnaround. (usually 1-3 days)</li>
-                <li>Unlimited projects in the backlog.</li>
-                <li>Mixes in surround and stereo.</li>
-                <li>Only 1 active project at a time.</li>
-              </ul>
-            </div>
-
-            <div style={styles.gridItem}>
-              <div style={styles.priceBox}>
-                <p style={styles.price}>
-                  <span style={styles.span}>$5,000</span>/month
-                </p>
-              </div>
-            </div>
-            <div style={styles.gridItemMobile}>
               <Button
                 variant="contained"
                 sx={styles.button}
@@ -265,75 +138,56 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
               </Button>
             </div>
 
-            {/* pro */}
-            <div style={styles.gridItem}>
-              <h1>Pro</h1>
-            </div>
-            <div style={styles.gridItem}>
-              <p style={styles.p}>
-                Pro is for mid-sized production companies and agencies that have
-                several active productions.
-              </p>
-            </div>
-            <div style={styles.gridItem}>
-              <h2 style={styles.noMargin}>What you get!</h2>
-            </div>
-            <div style={styles.gridItem}>
-              <ul>
-                <li>Unlimited mixes and editorial.</li>
-                <li>Unlimited revisions.</li>
-                <li>Lightning fast turnaround. (usually 1-3 days)</li>
-                <li>Unlimited projects in the backlog.</li>
-                <li>Mixes in surround and stereo.</li>
-                <li>Up to 3 active project at a time.</li>
+            {/* Pro */}
+            {/* <div> */}
+            <div style={styles.midGridItem}>
+              <div style={styles.bestValue}>
+                <p style={styles.bestValueText}>Best Value</p>
+              </div>
+              <h1 style={{ color: offWhite, marginTop: '35px' }}>
+                {pricing[1].type}
+              </h1>
+              <p style={styles.midP}>{pricing[1].description}</p>
+              <ul style={styles.ul}>
+                {pricing[1].options.map((item, index) => (
+                  <li key={index} style={{ color: offWhite }}>
+                    {item}
+                  </li>
+                ))}
               </ul>
-            </div>
-            <div style={styles.gridItem}>
               <div style={styles.priceBox}>
-                <p style={styles.price}>
-                  <span style={styles.span}>$7,500</span>/month
+                <p style={{ textAlign: 'center', color: offWhite }}>
+                  <span style={styles.span}>{pricing[1].price}</span>/month
                 </p>
               </div>
-            </div>
-            <div style={styles.gridItemMobile}>
               <Button
                 variant="contained"
-                sx={styles.button}
+                sx={{
+                  ...styles.whiteButton,
+                  '&:hover': {
+                    backgroundColor: white,
+                  },
+                }}
                 href="https://calendly.com/himidlow"
                 target="_blank"
               >
                 Book a call
               </Button>
             </div>
+            {/* </div> */}
 
-            {/* more */}
-            <div style={styles.gridItem}>
-              <h1>Need more?</h1>
-            </div>
-            <div style={styles.gridItem}>
-              <p style={styles.p}>
-                If you’re a larger scale production company and need one of the
-                following, let’s talk!
-              </p>
-            </div>
-            <div style={styles.gridItem}>
-              <ul>
-                <li>More than 4 active projects at a time.</li>
-                <li>Campaign level sound design. Immediate turn around.</li>
-                <li>Signature Sounds or Sonic logos.</li>
-                <li>VO or Composer support.</li>
-                <li> Mixes in Dolby ATMOS.</li>
-                <li>You might even need less of us. No worries, let’s talk.</li>
+            {/* Need More */}
+            <div style={styles.pringGridItem}>
+              <h1>{pricing[2].type}</h1>
+              <p style={styles.p}>{pricing[2].description}</p>
+              <ul style={styles.ul}>
+                {pricing[2].options.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
-            </div>
-            <div style={styles.gridItem}>
-              <div style={styles.priceBox}>
-                <p style={styles.price}></p>
-              </div>
-            </div>
-            <div style={styles.gridItem}>
+              <div style={styles.priceBox}>{/* no price */}</div>
               <Button
-                variant="outlined"
+                variant="contained"
                 sx={styles.button}
                 href="https://calendly.com/himidlow"
                 target="_blank"

@@ -318,3 +318,48 @@ export const scopeList = [
   { col: 3, item: 'Sonic Identity and Branding' },
   { col: 3, item: 'Scripted TV and Feature Mixes' },
 ]
+
+export const pricing = [
+  {
+    type: 'Standard',
+    description:
+      'Standard is for small production companies and agencies that need small quantities of short form content edited and mixed monthly.',
+    options: [
+      'Unlimited mixes and editorial.',
+      'Unlimited revisions.',
+      'Lightning fast turnaround. (usually 1-3 days)',
+      'Unlimited projects in the backlog.',
+      'Mixes in surround and stereo.',
+      'Only 1 active project at a time.',
+    ],
+    price: '$5,000',
+  },
+  {
+    type: 'Pro',
+    description:
+      'Pro is for mid-sized production companies and agencies that have several active productions.',
+    options: [
+      'Unlimited mixes and editorial.',
+      'Unlimited revisions.',
+      'Lightning fast turnaround. (usually 1-3 days)',
+      'Unlimited projects in the backlog.',
+      'Mixes in surround and stereo.',
+      'Only 3 active project at a time.',
+    ],
+    price: '$7,500',
+  },
+  {
+    type: 'Need more?',
+    description:
+      'If you’re a larger scale production company and need one of the following, let’s talk!',
+    options: [
+      'More than 4 active projects at a time.',
+      'Campaign level sound design. Immediate turn around.',
+      'Signature Sounds or Sonic logos.',
+      'VO or Composer support.',
+      'Mixes in Dolby ATMOS.',
+      'You might even need less of us. No worries, let’s talk.',
+    ],
+    price: '',
+  },
+]
