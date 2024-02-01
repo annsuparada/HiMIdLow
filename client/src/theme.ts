@@ -15,6 +15,7 @@ export const white = '#ffffff'
 export const offWhite = '#e8e8e8'
 export const logoColor = '#21232A'
 export const pink = '#FEE1FF'
+export const orange = '#E88B5E'
 
 export const mobileView = '600px'
 export const tabletView = '850px'

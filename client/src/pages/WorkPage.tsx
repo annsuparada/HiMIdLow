@@ -29,7 +29,7 @@ const WorkPage: React.FC = () => {
         : isTablet
         ? '1fr 1fr'
         : 'repeat(4, 1fr)',
-      gap: '10px',
+      gap: '20px',
     },
   }
   return (
@@ -49,6 +49,7 @@ const WorkPage: React.FC = () => {
                 imgUrl={item.imgUrl}
                 alt={item.alt}
                 videoUrl={item.videoUrl}
+                displayIcon={true}
               />
             ))}
           </div>

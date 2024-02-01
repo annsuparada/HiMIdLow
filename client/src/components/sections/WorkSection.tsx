@@ -47,6 +47,7 @@ const WorkSection: React.FC = () => {
             imgUrl={item.imgUrl}
             alt={item.alt}
             videoUrl={item.videoUrl}
+            displayIcon={false}
           />
         ))}
       </div>
