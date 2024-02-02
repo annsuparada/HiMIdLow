@@ -1,6 +1,5 @@
 import React from 'react'
 import { darkFont, desktopView, white } from '../theme'
-import MainWrapper from './MainWrapper'
 
 interface HadingTitleProps {
   title?: string
