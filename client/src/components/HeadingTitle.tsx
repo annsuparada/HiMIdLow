@@ -9,7 +9,7 @@ const HadingTitle: React.FC<HadingTitleProps> = ({ title, text }) => {
   const styles = {
     container: {
       width: '100%',
-      padding: '5rem 15px 5rem',
+      padding: '5rem 0 5rem',
       backgroundColor: darkFont,
       // backgroundImage: 'linear-gradient(to bottom, #21232a 50%, #4c4d55, #7b7c84, #adafb6, #e3e4eb)',
     },
