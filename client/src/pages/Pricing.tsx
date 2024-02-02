@@ -11,9 +11,12 @@ const PricingPage: React.FC = () => {
   return (
     <>
       <NavBar pathname="pricing" />
+      <HadingTitle
+        title="Pricing"
+        text="Find the perfect melody for your success"
+      />
       <PageContainer backgroundColor={darkBackground}>
         <MainWrapper backgroundColor={darkBackground} padding="0 0 6rem 0">
-          <HadingTitle title="Pricing" />
           <MembershipLevels membershipId="" />
           <Benefits disabledButton={true} />
         </MainWrapper>
