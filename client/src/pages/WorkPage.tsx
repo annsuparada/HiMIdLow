@@ -1,5 +1,6 @@
 import { Button, useMediaQuery } from '@mui/material'
 import React from 'react'
+import HadingTitle from '../components/HeadingTitle'
 import MainWrapper from '../components/MainWrapper'
 import NavBar from '../components/NavBar'
 import ScrollToTop from '../components/ScrollToTop'
@@ -35,6 +36,10 @@ const WorkPage: React.FC = () => {
   return (
     <>
       <NavBar pathname="work" />
+      <HadingTitle
+        title="Work"
+        text="Explore our masterpieces in every exceptional creation"
+      />
       <MainWrapper backgroundColor={background} minHeight="64vh">
         <ScrollToTop />
         <div style={styles.container}>

@@ -3,7 +3,7 @@ import { darkFont, desktopView, white } from '../theme'
 import MainWrapper from './MainWrapper'
 
 interface HadingTitleProps {
-  title: string
+  title?: string
   text?: string
 }
 const HadingTitle: React.FC<HadingTitleProps> = ({ title, text }) => {
@@ -23,7 +23,7 @@ const HadingTitle: React.FC<HadingTitleProps> = ({ title, text }) => {
     },
     h1: {
       color: white,
-      fontSize: 'clamp(2rem, 10vw, 4rem)',
+      fontSize: 'clamp(2rem, 10vw, 3.5rem)',
       margin: '0',
       padding: '5px',
       textAlign: 'left' as 'left',
@@ -33,7 +33,7 @@ const HadingTitle: React.FC<HadingTitleProps> = ({ title, text }) => {
       textAlign: 'left' as 'left',
       margin: '0',
       padding: '5px',
-      fontSize: '2rem',
+      fontSize: '1.5rem',
     },
   }
   return (
