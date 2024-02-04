@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { useMediaQuery } from '@mui/material'
 import logo from '../logo/LargeLogoWhite.svg'
@@ -39,7 +39,6 @@ const TabLink: React.FC<TabLinkProps> = ({ pathname, label, value }) => {
 }
 
 const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
-  const [value, setValue] = useState(pathname)
   const isTablet = useMediaQuery(`(max-width:${tabletView})`)
 
   const styles = {
@@ -47,7 +46,6 @@ const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      // padding: '0 15px 0',
     },
     tabContainer: {
       display: 'flex',
@@ -85,17 +83,21 @@ const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
               <nav>
                 <ul style={{ display: 'flex', listStyle: 'none', padding: 0 }}>
                   <li>
-                    <TabLink pathname={value} label="Work" value="work" />
+                    <TabLink pathname={pathname} label="Work" value="work" />
                   </li>
                   <li>
                     <TabLink
-                      pathname={value}
+                      pathname={pathname}
                       label="What We Do"
                       value="what-we-do"
                     />
                   </li>
                   <li>
-                    <TabLink pathname={value} label="Pricing" value="pricing" />
+                    <TabLink
+                      pathname={pathname}
+                      label="Pricing"
+                      value="pricing"
+                    />
                   </li>
                   <li>
                     <a
