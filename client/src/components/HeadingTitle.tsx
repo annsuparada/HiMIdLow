@@ -1,21 +1,23 @@
+import { useMediaQuery } from '@mui/material'
 import React from 'react'
-import { darkFont, desktopView, white } from '../theme'
+import { darkFont, desktopView, mobileView, white } from '../theme'
 
 interface HadingTitleProps {
   title?: string
   text?: string
 }
 const HadingTitle: React.FC<HadingTitleProps> = ({ title, text }) => {
+  const isMobile = useMediaQuery(`(max-width:${mobileView})`)
+
   const styles = {
     container: {
       width: '100%',
-      padding: '5rem 0 5rem',
       backgroundColor: darkFont,
-      // backgroundImage: 'linear-gradient(to bottom, #21232a 50%, #4c4d55, #7b7c84, #adafb6, #e3e4eb)',
     },
     wrapper: {
       maxWidth: desktopView,
       margin: '0 auto',
+      padding: isMobile ? '4rem 1rem' : '5rem 2rem',
     },
     textContainer: {
       maxWidth: '800px',
