@@ -1,24 +1,25 @@
+import { useMediaQuery } from '@mui/material'
 import React, { ReactNode } from 'react'
-import { desktopView } from '../theme'
+import { desktopView, mobileView } from '../theme'
 
 interface MainWrapperProps {
   children: ReactNode
   backgroundColor: string
   minHeight?: string
-  padding?: string
 }
 
 const MainWrapper: React.FC<MainWrapperProps> = ({
   children,
   backgroundColor,
   minHeight,
-  padding,
 }) => {
+  const isMobile = useMediaQuery(`(max-width:${mobileView})`)
+
   const styles = {
     container: {
       maxWidth: desktopView,
       margin: '0 auto',
-      padding: padding ? padding : 0,
+      padding: isMobile ? '1rem' : '2rem',
       backgroundColor: backgroundColor,
       minHeight: minHeight ? minHeight : 'none',
     },

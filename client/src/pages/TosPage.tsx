@@ -22,11 +22,11 @@ const TosPage: React.FC = () => {
   return (
     <>
       <NavBar pathname="tos" />
+      <HeadingTitle
+        title="Terms & Conditions"
+        text="Guidelines for seamless interactions. Your trusted agreement"
+      />
       <MainWrapper backgroundColor={background}>
-        <HeadingTitle
-          title="Terms & Conditions"
-          text="Guidelines for seamless interactions. Your trusted agreement"
-        />
         <div style={styles.container}>
           <ScrollToTop />
 

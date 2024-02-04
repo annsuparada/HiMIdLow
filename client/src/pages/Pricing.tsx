@@ -16,7 +16,7 @@ const PricingPage: React.FC = () => {
         text="Find the perfect melody for your success"
       />
       <PageContainer backgroundColor={darkBackground}>
-        <MainWrapper backgroundColor={darkBackground} padding="0 0 6rem 0">
+        <MainWrapper backgroundColor={darkBackground}>
           <MembershipLevels membershipId="" />
           <Benefits disabledButton={true} />
         </MainWrapper>

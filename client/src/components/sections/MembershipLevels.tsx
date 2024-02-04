@@ -108,7 +108,7 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
   return (
     <div id={membershipId}>
       <PageContainer backgroundColor={darkBackground} padding="3rem 0 8rem">
-        <MainWrapper backgroundColor={darkBackground} padding="0 30px">
+        <MainWrapper backgroundColor={darkBackground}>
           <h1 style={styles.h1}>Membership Levels</h1>
           <p style={{ textAlign: 'center', paddingBottom: '20px' }}>
             Choose your subscription plan!
