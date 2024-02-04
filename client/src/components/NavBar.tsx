@@ -42,25 +42,16 @@ const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
   const [value, setValue] = useState(pathname)
   const isTablet = useMediaQuery(`(max-width:${tabletView})`)
 
-  const handleChange = (newValue: string) => {
-    setValue(newValue)
-  }
-
   const styles = {
     navContainer: {
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      padding: '0 15px 0',
+      // padding: '0 15px 0',
     },
     tabContainer: {
       display: 'flex',
       alignItems: 'center',
-    },
-    tab: {
-      color: white,
-      padding: '10px',
-      textDecoration: 'none',
     },
     desktopTab: {
       display: isTablet ? 'none' : 'flex',
@@ -75,7 +66,7 @@ const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
     },
     logo: {
       width: '150px',
-      padding: '10px',
+      padding: '10px 0',
     },
     mobileViewTab: {
       display: isTablet ? 'flex' : 'none',
