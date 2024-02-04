@@ -16,6 +16,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToMembershipOnClick }) => {
       display: 'grid',
       jestifyContent: 'center',
       paddingTop: '4rem',
+      paddingBottom: '4rem',
       backgroundColor: darkFont,
     },
     bigText: {
