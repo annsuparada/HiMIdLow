@@ -7,7 +7,6 @@ import {
   mobileView,
   offWhite,
   primary,
-  white,
 } from '../../theme'
 import MainWrapper from '../MainWrapper'
 import PageContainer from '../PageContainer'
