@@ -24,7 +24,7 @@ const WhatWeDoPage: React.FC = () => {
       <NavBar pathname="what-we-do" />
       <HadingTitle
         title="What We Do"
-        text="Elevating brands with sonic creativity magic"
+        text="Make your message memorable"
       />
       <div>
         <h1 style={{ textAlign: 'center', fontSize: '44px' }}>About Us</h1>

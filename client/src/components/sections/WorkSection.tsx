@@ -42,6 +42,7 @@ const WorkSection: React.FC = () => {
 
       <div style={styles.imgContainer}>
         {videos.map((item, index) => (
+          // <div style={styles.img}>
           <VideoModal
             key={index}
             imgUrl={item.imgUrl}
@@ -49,6 +50,7 @@ const WorkSection: React.FC = () => {
             videoUrl={item.videoUrl}
             displayIcon={false}
           />
+          // </div>
         ))}
       </div>
       <Button

@@ -24,7 +24,7 @@ const TosPage: React.FC = () => {
       <NavBar pathname="tos" />
       <HeadingTitle
         title="Terms & Conditions"
-        text="Guidelines for seamless interactions. Your trusted agreement"
+        text="The Fine Print"
       />
       <MainWrapper backgroundColor={background}>
         <div style={styles.container}>

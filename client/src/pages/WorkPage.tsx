@@ -38,7 +38,7 @@ const WorkPage: React.FC = () => {
       <NavBar pathname="work" />
       <HadingTitle
         title="Work"
-        text="Explore our masterpieces in every exceptional creation"
+        text="Exceptional sound for exceptional brand"
       />
       <MainWrapper backgroundColor={background} minHeight="64vh">
         <ScrollToTop />

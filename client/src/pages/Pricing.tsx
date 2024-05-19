@@ -13,7 +13,7 @@ const PricingPage: React.FC = () => {
       <NavBar pathname="pricing" />
       <HadingTitle
         title="Pricing"
-        text="Find the perfect melody for your success"
+        text="Memberships designed for creative agencies of all sizes"
       />
       <PageContainer backgroundColor={darkBackground}>
         <MainWrapper backgroundColor={darkBackground}>

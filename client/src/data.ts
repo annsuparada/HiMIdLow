@@ -354,7 +354,8 @@ export const pricing = [
       'If you’re a larger scale production company and need one of the following, let’s talk!',
     options: [
       'More than 4 active projects at a time.',
-      'Campaign level sound design. Immediate turn around.',
+      'Campaign level sound design.',
+      'Immediate turn around.',
       'Signature Sounds or Sonic logos.',
       'VO or Composer support.',
       'Mixes in Dolby ATMOS.',
