@@ -176,19 +176,19 @@ const DetailSection: React.FC<DetailSectionProps> = ({ whatWeDoId }) => {
           <p style={{ textAlign: 'center' }}>Whatever you need, we got you!</p>
           <div style={styles.cardContainer}>
             {scopeList.map((i, index) => (
-              <>
+              <div key={index}>
                 {i.col === 1 ? <p style={styles.mixingList}>{i.item}</p> : null}
-              </>
+              </div>
             ))}
             {scopeList.map((i, index) => (
-              <>
+              <div key={index}>
                 {i.col === 2 ? <p style={styles.mixingList}>{i.item}</p> : null}
-              </>
+              </div>
             ))}
             {scopeList.map((i, index) => (
-              <>
+              <div key={index}>
                 {i.col === 3 ? <p style={styles.mixingList}>{i.item}</p> : null}
-              </>
+              </div>
             ))}
           </div>
         </MainWrapper>
