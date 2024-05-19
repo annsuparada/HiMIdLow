@@ -6,6 +6,7 @@ import {
   darkFont,
   mobileView,
   offWhite,
+  primary,
   white,
 } from '../../theme'
 import MainWrapper from '../MainWrapper'
@@ -40,9 +41,11 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
     midGridItem: {
       display: 'grid',
       gridTemplateColumns: '1fr',
-      backgroundColor: darkFont,
+      backgroundColor: '#FAF6FA',
       padding: '20px',
       borderRadius: '10px',
+      border: '2px solid #BCC0DA',
+      boxShadow: '0 6px 45px 0px #261AAB33',
       position: 'relative' as 'relative',
     },
     gridItem: {
@@ -55,7 +58,7 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
     },
     midP: {
       margin: '0px',
-      color: offWhite,
+      color: darkFont,
     },
     priceBox: {
       marginTop: '60px',
@@ -87,7 +90,7 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
     },
     bestValue: {
       height: '30px',
-      backgroundColor: 'red',
+      backgroundColor: primary,
       borderTopLeftRadius: '8px',
       borderTopRightRadius: '8px',
       width: '100%',
@@ -144,30 +147,25 @@ const MembershipLevels: React.FC<MembershipLevelsProps> = ({
               <div style={styles.bestValue}>
                 <p style={styles.bestValueText}>Best Value</p>
               </div>
-              <h1 style={{ color: offWhite, marginTop: '35px' }}>
+              <h1 style={{ color: darkFont, marginTop: '35px' }}>
                 {pricing[1].type}
               </h1>
               <p style={styles.midP}>{pricing[1].description}</p>
               <ul style={styles.ul}>
                 {pricing[1].options.map((item, index) => (
-                  <li key={index} style={{ color: offWhite }}>
+                  <li key={index} style={{ color: darkFont }}>
                     {item}
                   </li>
                 ))}
               </ul>
               <div style={styles.priceBox}>
-                <p style={{ textAlign: 'center', color: offWhite }}>
+                <p style={{ textAlign: 'center', color: darkFont }}>
                   <span style={styles.span}>{pricing[1].price}</span>/month
                 </p>
               </div>
               <Button
                 variant="contained"
-                sx={{
-                  ...styles.whiteButton,
-                  '&:hover': {
-                    backgroundColor: white,
-                  },
-                }}
+                sx={styles.button}
                 href="https://calendly.com/himidlow"
                 target="_blank"
               >
