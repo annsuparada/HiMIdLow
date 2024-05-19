@@ -301,23 +301,9 @@ export const videoListWorkPage = [
   },
 ]
 
-export const scopeList = [
-  { col: 1, item: 'Mixing' },
-  { col: 1, item: 'Editorial' },
-  { col: 1, item: 'Audio Repair' },
-  { col: 1, item: 'Sound Design' },
-  { col: 1, item: 'Signature Sounds' },
-  { col: 2, item: 'Music Mixing' },
-  { col: 2, item: 'Podcast Production' },
-  { col: 2, item: 'Audio Consulting' },
-  { col: 2, item: 'Composer Referrals' },
-  { col: 2, item: 'Foley' },
-  { col: 3, item: 'ATMOS' },
-  { col: 3, item: 'Binaural Audio' },
-  { col: 3, item: 'Game Sound Design' },
-  { col: 3, item: 'Sonic Identity and Branding' },
-  { col: 3, item: 'Scripted TV and Feature Mixes' },
-]
+export const scopeList1 = ['Mixing', 'Editorial','Audio Repair', 'Sound Design', 'Signature Sounds' ]
+export const scopeList2 = ['Music Mixing', 'Podcast Production', 'Audio Consulting', 'Composer Referrals', 'Foley' ]
+export const scopeList3 = ['Dolby Atmos', 'Binaural Audio', 'Game Sound Design', 'Sonic Identity and Branding', 'Scripted TV and Feature Mixes']
 
 export const pricing = [
   {

@@ -3,7 +3,7 @@ import React from 'react'
 import { darkBackground, lightPurple, tabletView } from '../../theme'
 import quote from '../../logo/Quote.svg'
 import MainWrapper from '../MainWrapper'
-import { details, scopeList } from '../../data'
+import { details, scopeList1, scopeList2, scopeList3 } from '../../data'
 
 interface DetailSectionProps {
   whatWeDoId: string
@@ -175,19 +175,19 @@ const DetailSection: React.FC<DetailSectionProps> = ({ whatWeDoId }) => {
           <h1 style={styles.h1}>More than just mixes!</h1>
           <p style={{ textAlign: 'center' }}>Whatever you need, we got you!</p>
           <div style={styles.cardContainer}>
-            {scopeList.map((i, index) => (
+            {scopeList1.map((i, index) => (
               <div key={index}>
-                {i.col === 1 ? <p style={styles.mixingList}>{i.item}</p> : null}
+               <p style={styles.mixingList}>{i}</p>
               </div>
             ))}
-            {scopeList.map((i, index) => (
+            {scopeList2.map((i, index) => (
               <div key={index}>
-                {i.col === 2 ? <p style={styles.mixingList}>{i.item}</p> : null}
+               <p style={styles.mixingList}>{i}</p> 
               </div>
             ))}
-            {scopeList.map((i, index) => (
+            {scopeList3.map((i, index) => (
               <div key={index}>
-                {i.col === 3 ? <p style={styles.mixingList}>{i.item}</p> : null}
+                <p style={styles.mixingList}>{i}</p> 
               </div>
             ))}
           </div>
