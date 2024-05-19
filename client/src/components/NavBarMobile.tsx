@@ -2,7 +2,7 @@ import { Button, Menu, MenuItem } from '@mui/material'
 import React from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
 import { Link } from 'react-router-dom'
-import { darkFont } from '../theme'
+import { darkFont, white } from '../theme'
 
 const NavBarMobile: React.FC = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
@@ -30,7 +30,7 @@ const NavBarMobile: React.FC = () => {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        <MenuIcon fontSize="large" color="secondary" />
+        <MenuIcon fontSize="large" sx={{ color: white }} />
       </Button>
       <Menu
         id="basic-menu"

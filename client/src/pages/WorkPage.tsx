@@ -1,5 +1,6 @@
 import { Button, useMediaQuery } from '@mui/material'
 import React from 'react'
+import HadingTitle from '../components/HeadingTitle'
 import MainWrapper from '../components/MainWrapper'
 import NavBar from '../components/NavBar'
 import ScrollToTop from '../components/ScrollToTop'
@@ -29,12 +30,16 @@ const WorkPage: React.FC = () => {
         : isTablet
         ? '1fr 1fr'
         : 'repeat(4, 1fr)',
-      gap: '10px',
+      gap: '20px',
     },
   }
   return (
     <>
       <NavBar pathname="work" />
+      <HadingTitle
+        title="Work"
+        text="Exceptional Sound for Exceptional Brands"
+      />
       <MainWrapper backgroundColor={background} minHeight="64vh">
         <ScrollToTop />
         <div style={styles.container}>
@@ -49,6 +54,7 @@ const WorkPage: React.FC = () => {
                 imgUrl={item.imgUrl}
                 alt={item.alt}
                 videoUrl={item.videoUrl}
+                displayIcon={true}
               />
             ))}
           </div>

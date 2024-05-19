@@ -301,20 +301,52 @@ export const videoListWorkPage = [
   },
 ]
 
-export const scopeList = [
-  { col: 1, item: 'Mixing' },
-  { col: 1, item: 'Editorial' },
-  { col: 1, item: 'Audio Repair' },
-  { col: 1, item: 'Sound Design' },
-  { col: 1, item: 'Signature Sounds' },
-  { col: 2, item: 'Music Mixing' },
-  { col: 2, item: 'Podcast Production' },
-  { col: 2, item: 'Audio Consulting' },
-  { col: 2, item: 'Composer Referrals' },
-  { col: 2, item: 'Foley' },
-  { col: 3, item: 'ATMOS' },
-  { col: 3, item: 'Binaural Audio' },
-  { col: 3, item: 'Game Sound Design' },
-  { col: 3, item: 'Sonic Identity and Branding' },
-  { col: 3, item: 'Scripted TV and Feature Mixes' },
+export const scopeList1 = ['Mixing', 'Editorial','Audio Repair', 'Sound Design', 'Signature Sounds' ]
+export const scopeList2 = ['Music Mixing', 'Podcast Production', 'Audio Consulting', 'Composer Referrals', 'Foley' ]
+export const scopeList3 = ['Dolby Atmos', 'Binaural Audio', 'Game Sound Design', 'Sonic Identity and Branding', 'Scripted TV and Feature Mixes']
+
+export const pricing = [
+  {
+    type: 'Standard',
+    description:
+      'Standard is for small production companies and agencies that need small quantities of short form content edited and mixed monthly.',
+    options: [
+      'Unlimited mixes and editorial.',
+      'Unlimited revisions.',
+      'Lightning fast turnaround. (usually 1-3 days)',
+      'Unlimited projects in the backlog.',
+      'Mixes in surround and stereo.',
+      'Only 1 active project at a time.',
+    ],
+    price: '$5,000',
+  },
+  {
+    type: 'Pro',
+    description:
+      'Pro is for mid-sized production companies and agencies that have several active productions.',
+    options: [
+      'Unlimited mixes and editorial.',
+      'Unlimited revisions.',
+      'Lightning fast turnaround. (usually 1-3 days)',
+      'Unlimited projects in the backlog.',
+      'Mixes in surround and stereo.',
+      'Only 3 active project at a time.',
+    ],
+    price: '$7,500',
+  },
+  {
+    type: 'Need more?',
+    description:
+      'If you’re a larger scale production company and need one of the following, let’s talk!',
+    options: [
+      'More than 4 active projects at a time.',
+      'Campaign level sound design.',
+      'Immediate turn around.',
+      'Signature Sounds or Sonic logos.',
+      'VO or Composer support.',
+      'Mixes in Dolby ATMOS.',
+      'You might even need less of us. No worries, let’s talk.',
+    ],
+    price: '',
+  },
 ]

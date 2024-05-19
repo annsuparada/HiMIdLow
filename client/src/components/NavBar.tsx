@@ -1,133 +1,124 @@
-import { Tab, Tabs, useMediaQuery } from '@mui/material'
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import {
-  background,
-  darkBotton,
-  darkFont,
-  primary,
-  tabletView,
-  white,
-} from '../theme'
+import { useMediaQuery } from '@mui/material'
+import logo from '../logo/LargeLogoWhite.svg'
 import MainWrapper from './MainWrapper'
-import logo from '../logo/LargeLogoBlack.svg'
+import { darkFont, primary, tabletView, white } from '../theme'
 import NavBarMobile from './NavBarMobile'
+import PageContainer from './PageContainer'
 
 interface NavBarProps {
   pathname: string
 }
 
-const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
-  const [value, setValue] = useState(pathname)
-  const isTablet = useMediaQuery(`(max-width:${tabletView})`)
-
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue)
+interface TabLinkProps {
+  pathname: string
+  label: string
+  value: string
+}
+const TabLink: React.FC<TabLinkProps> = ({ pathname, label, value }) => {
+  const styles = {
+    tab: {
+      color: white,
+      padding: '10px',
+      textDecoration: 'none',
+    },
   }
+  return (
+    <Link
+      to={`/${value}`}
+      style={{
+        ...styles.tab,
+        borderBottom: value === pathname ? `2px solid ${white}` : 'none',
+        fontWeight: value === pathname ? 'bold' : 'normal',
+      }}
+    >
+      {label}
+    </Link>
+  )
+}
+
+const NavBar: React.FC<NavBarProps> = ({ pathname }) => {
+  const isTablet = useMediaQuery(`(max-width:${tabletView})`)
 
   const styles = {
     navContainer: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(2, 1fr)',
-      padding: '18px 5px 0',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
     },
     tabContainer: {
       display: 'flex',
-      justifyContent: 'flex-end',
-    },
-    tab: {
-      color: darkFont,
-      '&.Mui-selected': {
-        fontWeight: 'bold',
-      },
+      alignItems: 'center',
     },
     desktopTab: {
-      display: isTablet ? 'none' : 'inline',
+      display: isTablet ? 'none' : 'flex',
     },
-    link: {
-      color: darkFont,
-      textDecoration: 'none',
-    },
-    botton: {
-      color: darkBotton,
-    },
-    linkBotton: {
-      color: white,
+    linkButton: {
+      color: 'white',
       textDecoration: 'none',
       backgroundColor: primary,
       padding: '10px',
       borderRadius: '3px',
+      marginLeft: '7px',
     },
     logo: {
       width: '150px',
-      padding: '10px',
+      padding: '10px 0',
     },
-    moblieViewTab: {
-      display: isTablet ? 'inline' : 'none',
+    mobileViewTab: {
+      display: isTablet ? 'flex' : 'none',
     },
   }
+
   return (
-    <MainWrapper backgroundColor={background}>
-      <div style={styles.navContainer} className="nav-container">
-        <Link to="/">
-          <img src={logo} alt="Low Mid Hight Logo" style={styles.logo} />
-        </Link>
-        <div style={styles.tabContainer}>
-          <div style={styles.desktopTab}>
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              textColor="secondary"
-              indicatorColor="secondary"
-            >
-              <Tab
-                value="work"
-                label={
-                  <Link to="/work" style={styles.link}>
-                    Work
-                  </Link>
-                }
-                sx={styles.tab}
-              />
-              <Tab
-                value="what-we-do"
-                label={
-                  <Link to="/what-we-do" style={styles.link}>
-                    What we do
-                  </Link>
-                }
-                sx={styles.tab}
-              />
-              <Tab
-                value="pricing"
-                label={
-                  <Link to="/pricing" style={styles.link}>
-                    Pricing
-                  </Link>
-                }
-                sx={styles.tab}
-              />
-              <Tab
-                value="contact"
-                label={
-                  <Link
-                    to="https://calendly.com/himidlow"
-                    target="_blank"
-                    style={styles.linkBotton}
-                  >
-                    Let's talk
-                  </Link>
-                }
-                sx={styles.tab}
-              />
-            </Tabs>
-          </div>
-          <div style={styles.moblieViewTab}>
-            <NavBarMobile />
+    <PageContainer backgroundColor={darkFont}>
+      <MainWrapper backgroundColor={darkFont}>
+        <div style={styles.navContainer} className="nav-container">
+          <Link to="/">
+            <img src={logo} alt="Low Mid High Logo" style={styles.logo} />
+          </Link>
+          <div style={styles.tabContainer}>
+            <div style={styles.desktopTab}>
+              <nav>
+                <ul style={{ display: 'flex', listStyle: 'none', padding: 0 }}>
+                  <li>
+                    <TabLink pathname={pathname} label="Work" value="work" />
+                  </li>
+                  <li>
+                    <TabLink
+                      pathname={pathname}
+                      label="What We Do"
+                      value="what-we-do"
+                    />
+                  </li>
+                  <li>
+                    <TabLink
+                      pathname={pathname}
+                      label="Pricing"
+                      value="pricing"
+                    />
+                  </li>
+                  <li>
+                    <a
+                      href="https://calendly.com/himidlow"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={styles.linkButton}
+                    >
+                      Let's talk
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div style={styles.mobileViewTab}>
+              <NavBarMobile />
+            </div>
           </div>
         </div>
-      </div>
-    </MainWrapper>
+      </MainWrapper>
+    </PageContainer>
   )
 }
 

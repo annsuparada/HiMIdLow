@@ -1,5 +1,6 @@
 import { Button, useMediaQuery } from '@mui/material'
 import React from 'react'
+import HadingTitle from '../components/HeadingTitle'
 import NavBar from '../components/NavBar'
 import DetailSection from '../components/sections/DetailSection'
 import { darkBackground, tabletView } from '../theme'
@@ -21,6 +22,10 @@ const WhatWeDoPage: React.FC = () => {
   return (
     <>
       <NavBar pathname="what-we-do" />
+      <HadingTitle
+        title="What We Do"
+        text="Make Your Message Memorable"
+      />
       <div>
         <h1 style={{ textAlign: 'center', fontSize: '44px' }}>About Us</h1>
         <div style={styles.container}>

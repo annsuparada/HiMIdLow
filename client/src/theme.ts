@@ -1,6 +1,7 @@
 import { createTheme } from '@mui/material/styles'
 
-export const primary = '#261AAB'
+// export const primary = '#261AAB'
+export const primary = '#0d60dd'
 export const secondary = '#21232a'
 export const error = '#cc0000' // need to update
 export const warning = '#f39c12' // need to update
@@ -8,13 +9,15 @@ export const success = '#007f4f' // need to update
 export const background = '#efefef'
 export const darkBackground = '#e3e4eb'
 export const darkFont = '#21232a'
-export const darkBotton = '#261aab'
+// export const darkBotton = '#261aab'
+export const darkBotton = '#0d60dd'
 export const lightPurple = '#F0E5F6'
 export const darkPurple = '#1A126F26'
 export const white = '#ffffff'
 export const offWhite = '#e8e8e8'
 export const logoColor = '#21232A'
 export const pink = '#FEE1FF'
+export const orange = '#E88B5E'
 
 export const mobileView = '600px'
 export const tabletView = '850px'
