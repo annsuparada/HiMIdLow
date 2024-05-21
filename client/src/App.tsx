@@ -1,16 +1,20 @@
 import { ThemeProvider } from '@mui/material/styles'
 import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer'
 import PageContainer from './components/PageContainer'
+import GoogleAnalytics from './GoogleAnalytics';
 import Homepage from './pages/Homepage'
 import PricingPage from './pages/Pricing'
 import TosPage from './pages/TosPage'
 import WhatWeDoPage from './pages/WhatWeDoPage'
 import WorkPage from './pages/WorkPage'
 import { background, theme } from './theme'
+import usePageTracking from './usePageTracking';
 
 const App: React.FC = () => {
+  usePageTracking();
+
   const membershipId = 'membership-levels'
   const whatWeDoId = 'what-we-do'
 
@@ -23,7 +27,8 @@ const App: React.FC = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Router>
+      {/* <Router> */}
+        <GoogleAnalytics />
         <PageContainer backgroundColor={background}>
           <Routes>
             <Route
@@ -45,7 +50,7 @@ const App: React.FC = () => {
           </Routes>
         </PageContainer>
         <Footer />
-      </Router>
+      {/* </Router> */}
     </ThemeProvider>
   )
 }
