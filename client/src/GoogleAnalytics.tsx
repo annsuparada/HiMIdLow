@@ -8,7 +8,7 @@ const GoogleAnalytics = () => {
     if (process.env.NODE_ENV === 'production' && trackingId) {
       ReactGA.initialize(trackingId);
       ReactGA.pageview(window.location.pathname + window.location.search);
-      console.warn('Running Google Analytics')
+      console.warn('Running Google Analytics', trackingId)
     } else {
       console.warn('Google Analytics is not initialized. Environment:', process.env.NODE_ENV);
     }
