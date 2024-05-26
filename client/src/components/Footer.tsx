@@ -73,8 +73,7 @@ const Footer: React.FC = () => {
               Contact: <br />
               email:{' '}
               <Link to="mailto:andy@himidlow.com">andy@himidlow.com</Link>{' '}
-              <br />
-              phone: <Link to="tel:+13236128138">323.612.8138</Link>
+
             </p>
             <div>
               <Link
