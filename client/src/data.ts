@@ -187,13 +187,13 @@ export const details = [
 export const videoImgListMobile = [
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200869/Untitled_design_3_pdl2tj.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200869/Moive%20posters/Untitled_design_3_pdl2tj.png',
     alt: 'MODOK',
     videoUrl: 'https://www.youtube.com/embed/oSEWdhHBlYU?si=tEpHwrBs8A1rln6L',
   },
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698199367/3_dzicgr.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698199367/Moive%20posters/3_dzicgr.png',
     alt: 'WOKE',
     videoUrl: 'https://www.youtube.com/embed/b5kODvhSRAE?si=VfoxVxXU7N_eCuSI',
   },
@@ -202,25 +202,25 @@ export const videoImgListMobile = [
 export const videoImgListHomePage = [
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698199367/1_zjqlti.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698199367/Moive%20posters/1_zjqlti.png',
     alt: 'The Great',
     videoUrl: 'https://www.youtube.com/embed/KmynXixC9W8?si=owrJiyb7c0ZaYZNR',
   },
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200869/Untitled_design_3_pdl2tj.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200869/Moive%20posters/Untitled_design_3_pdl2tj.png',
     alt: 'MODOK',
     videoUrl: 'https://www.youtube.com/embed/oSEWdhHBlYU?si=tEpHwrBs8A1rln6L',
   },
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698199367/3_dzicgr.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698199367/Moive%20posters/3_dzicgr.png',
     alt: 'WOKE',
     videoUrl: 'https://www.youtube.com/embed/b5kODvhSRAE?si=VfoxVxXU7N_eCuSI',
   },
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698199366/4_txg5zl.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698199366/Moive%20posters/4_txg5zl.png',
     alt: 'Dopesick',
     videoUrl: 'https://www.youtube.com/embed/lUVR63ZHLV4?si=xxQgWFjLnLz0XSuD',
   },
@@ -229,80 +229,80 @@ export const videoImgListHomePage = [
 export const videoListWorkPage = [
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698199367/1_zjqlti.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698199367/Moive%20posters/1_zjqlti.png',
     alt: 'The Great',
     videoUrl: 'https://www.youtube.com/embed/KmynXixC9W8?si=owrJiyb7c0ZaYZNR',
   },
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200869/Untitled_design_3_pdl2tj.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200869/Moive%20posters/Untitled_design_3_pdl2tj.png',
     alt: 'MODOK',
     videoUrl: 'https://www.youtube.com/embed/oSEWdhHBlYU?si=tEpHwrBs8A1rln6L',
   },
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698199367/3_dzicgr.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698199367/Moive%20posters/3_dzicgr.png',
     alt: 'WOKE',
     videoUrl: 'https://www.youtube.com/embed/b5kODvhSRAE?si=VfoxVxXU7N_eCuSI',
   },
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698199366/4_txg5zl.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698199366/Moive%20posters/4_txg5zl.png',
     alt: 'Dopesick',
     videoUrl: 'https://www.youtube.com/embed/lUVR63ZHLV4?si=xxQgWFjLnLz0XSuD',
   },
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200676/14_qeh3ai.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200676/Moive%20posters/14_qeh3ai.png',
     alt: 'Solar Oppesites',
     videoUrl: 'https://www.youtube.com/embed/x6lVlQiGQIU?si=FC_HjczmN-42PIBm',
   },
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200676/13_tz9dre.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200676/Moive%20posters/13_tz9dre.png',
     alt: 'Shrill',
     videoUrl: 'https://www.youtube.com/embed/PyDjQf8KJyc?si=hoDxo15sKYILQ8zh',
   },
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200677/11_cgr3oe.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200677/Moive%20posters/11_cgr3oe.png',
     alt: 'Palm Spring',
     videoUrl: 'https://www.youtube.com/embed/wE_vFerChns?si=z5MrLlMgSB8icSht',
   },
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200679/9_p4mxgb.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200679/Moive%20posters/9_p4mxgb.png',
     alt: 'Nine Perfect Strangers',
     videoUrl: 'https://www.youtube.com/embed/n-SExOBZ1uI?si=5Y4nJ_wJGE60-3Ot',
   },
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200680/8_doyltp.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200680/Moive%20posters/8_doyltp.png',
     alt: 'Love Victor',
     videoUrl: 'https://www.youtube.com/embed/fDuDeK7UMnk?si=0myn8idBlJlBE7_t',
   },
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200680/7_dythgs.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200680/Moive%20posters/7_dythgs.png',
     alt: 'In and of itself',
     videoUrl: 'https://www.youtube.com/embed/_62BeXxd_jo?si=F7WkkWU1rEj4KFdy',
   },
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200680/6_ywbfvt.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200680/Moive%20posters/6_ywbfvt.png',
     alt: '69',
     videoUrl: 'https://www.youtube.com/embed/4MQrPIwcKCg?si=iTUsfTo7Vc8RIsr-',
   },
   {
     imgUrl:
-      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200681/5_pvweyg.png',
+      'https://res.cloudinary.com/dejr86qx8/image/upload/v1698200681/Moive%20posters/5_pvweyg.png',
     alt: 'False Positive',
     videoUrl: 'https://www.youtube.com/embed/VQ7hFBNWsyk?si=mw1gKe3ja-AVsYqR',
   },
 ]
 
-export const scopeList1 = ['Mixing', 'Editorial','Audio Repair', 'Sound Design', 'Signature Sounds' ]
-export const scopeList2 = ['Music Mixing', 'Podcast Production', 'Audio Consulting', 'Composer Referrals', 'Foley' ]
+export const scopeList1 = ['Mixing', 'Editorial', 'Audio Repair', 'Sound Design', 'Signature Sounds']
+export const scopeList2 = ['Music Mixing', 'Podcast Production', 'Audio Consulting', 'Composer Referrals', 'Foley']
 export const scopeList3 = ['Dolby Atmos', 'Binaural Audio', 'Game Sound Design', 'Sonic Identity and Branding', 'Scripted TV and Feature Mixes']
 
 export const pricing = [
